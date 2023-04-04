@@ -70,12 +70,6 @@
     <Compile Include="sequential.Designer.cs">
       <DependentUpon>sequential.cs</DependentUpon>
     </Compile>
-    <Compile Include="stopwatch.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="stopwatch.Designer.cs">
-      <DependentUpon>stopwatch.cs</DependentUpon>
-    </Compile>
     <Compile Include="Umur.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,9 +113,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="sequential.resx">
       <DependentUpon>sequential.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="stopwatch.resx">
-      <DependentUpon>stopwatch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Umur.resx">
       <DependentUpon>Umur.cs</DependentUpon>

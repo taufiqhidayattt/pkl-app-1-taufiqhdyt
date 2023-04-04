@@ -35,7 +35,6 @@ namespace pkl_app_1_taufiqhdyt
             this.numerikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.umurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.potongStringToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.stopwatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alurSequentialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.percabanganToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tugasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,7 +61,6 @@ namespace pkl_app_1_taufiqhdyt
             this.numerikToolStripMenuItem,
             this.umurToolStripMenuItem,
             this.potongStringToolStripMenuItem,
-            this.stopwatchToolStripMenuItem,
             this.alurSequentialToolStripMenuItem,
             this.percabanganToolStripMenuItem});
             this.latihanToolStripMenuItem.Name = "latihanToolStripMenuItem";
@@ -97,13 +95,6 @@ namespace pkl_app_1_taufiqhdyt
             this.potongStringToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.potongStringToolStripMenuItem.Text = "Potong String";
             this.potongStringToolStripMenuItem.Click += new System.EventHandler(this.potongStringToolStripMenuItem_Click);
-            // 
-            // stopwatchToolStripMenuItem
-            // 
-            this.stopwatchToolStripMenuItem.Name = "stopwatchToolStripMenuItem";
-            this.stopwatchToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.stopwatchToolStripMenuItem.Text = "Stopwatch";
-            this.stopwatchToolStripMenuItem.Click += new System.EventHandler(this.stopwatchToolStripMenuItem_Click);
             // 
             // alurSequentialToolStripMenuItem
             // 
@@ -163,7 +154,6 @@ namespace pkl_app_1_taufiqhdyt
         private System.Windows.Forms.ToolStripMenuItem potongStringToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tugasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kalkulatorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem stopwatchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem alurSequentialToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem percabanganToolStripMenuItem;
     }
