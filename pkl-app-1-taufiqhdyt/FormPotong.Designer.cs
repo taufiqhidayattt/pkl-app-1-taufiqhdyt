@@ -1,7 +1,7 @@
 ﻿
 namespace pkl_app_1_taufiqhdyt
 {
-    partial class Potong
+    partial class FormPotong
     {
         /// <summary>
         /// Required designer variable.

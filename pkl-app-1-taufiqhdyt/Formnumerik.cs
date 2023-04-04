@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace pkl_app_1_taufiqhdyt
 {
-    public partial class Formnumerik : Form
+    public partial class FormNumerik : Form
     {
-        public Formnumerik()
+        public FormNumerik()
         {
             InitializeComponent();
         }

@@ -1,7 +1,7 @@
 ﻿
 namespace pkl_app_1_taufiqhdyt
 {
-    partial class sequential
+    partial class FormAlurSequential
     {
         /// <summary>
         /// Required designer variable.

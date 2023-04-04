@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace pkl_app_1_taufiqhdyt
 {
-    public partial class kalkulator : Form
+    public partial class FormKalkulator : Form
     {
         private double angkaTamp = 0;
         private double angkaMem = 0;
         private string op = "";
-        public kalkulator()
+        public FormKalkulator()
         {
             InitializeComponent();
         }

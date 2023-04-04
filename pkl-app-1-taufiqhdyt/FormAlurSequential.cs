@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace pkl_app_1_taufiqhdyt
 {
-    public partial class sequential : Form
+    public partial class FormAlurSequential : Form
     {
-        public sequential()
+        public FormAlurSequential()
         {
             InitializeComponent();
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace pkl_app_1_taufiqhdyt
 {
-    public partial class Potong : Form
+    public partial class FormPotong : Form
     {
-        public Potong()
+        public FormPotong()
         {
             InitializeComponent();
         }

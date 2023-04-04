@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace pkl_app_1_taufiqhdyt
 {
-    public partial class percabangan : Form
+    public partial class FormAlurPercabangan : Form
     {
         private int waktu = 0;
         private int score = 0;
@@ -18,7 +18,7 @@ namespace pkl_app_1_taufiqhdyt
         private string[] namaWarna = { "Merah", "kuning", "Hijau", "Biru" };
         private int kodeWarnaSkrg = 1;
 
-        public percabangan()
+        public FormAlurPercabangan()
         {
             InitializeComponent();
         }

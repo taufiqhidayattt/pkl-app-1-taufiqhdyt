@@ -1,7 +1,7 @@
 ﻿
 namespace pkl_app_1_taufiqhdyt
 {
-    partial class percabangan
+    partial class FormAlurPercabangan
     {
         /// <summary>
         /// Required designer variable.

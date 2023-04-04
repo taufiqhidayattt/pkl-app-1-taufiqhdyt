@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace pkl_app_1_taufiqhdyt
 {
-    public partial class Umur : Form
+    public partial class FormUmur : Form
     {
-        public Umur()
+        public FormUmur()
         {
             InitializeComponent();
         }

@@ -1,7 +1,7 @@
 ﻿
 namespace pkl_app_1_taufiqhdyt
 {
-    partial class kalkulator
+    partial class FormKalkulator
     {
         /// <summary>
         /// Required designer variable.

@@ -1,7 +1,7 @@
 ﻿
 namespace pkl_app_1_taufiqhdyt
 {
-    partial class Umur
+    partial class FormUmur
     {
         /// <summary>
         /// Required designer variable.

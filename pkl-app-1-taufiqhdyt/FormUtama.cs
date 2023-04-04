@@ -38,7 +38,7 @@ namespace pkl_app_1_taufiqhdyt
 
         private void numerikToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var form = new Formnumerik();
+            var form = new FormNumerik();
         form.MdiParent = this;
             form.Show();
 
@@ -51,21 +51,21 @@ namespace pkl_app_1_taufiqhdyt
 
         private void umurToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var form = new Umur();
+            var form = new FormUmur();
             form.MdiParent = this;
             form.Show();
         }
 
         private void potongStringToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var form = new Potong();
+            var form = new FormPotong();
             form.MdiParent = this;
             form.Show();
         }
 
         private void kalkulatorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var from = new kalkulator();
+            var from = new FormKalkulator();
             from.MdiParent = this;
             from.Show();
         }
@@ -79,14 +79,14 @@ namespace pkl_app_1_taufiqhdyt
 
         private void alurSequentialToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var from = new sequential();
+            var from = new FormAlurSequential();
             from.MdiParent = this;
             from.Show();
         }
 
         private void percabanganToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var from = new percabangan();
+            var from = new FormAlurPercabangan();
             from.MdiParent = this;
             from.Show();
         }
