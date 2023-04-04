@@ -58,6 +58,12 @@
     <Compile Include="FormAlurPercabangan.Designer.cs">
       <DependentUpon>FormAlurPercabangan.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPotong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,12 +94,6 @@
     <Compile Include="FormString.Designer.cs">
       <DependentUpon>FormString.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormUtama.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAlurPercabangan.resx">
       <DependentUpon>FormAlurPercabangan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPotong.resx">
       <DependentUpon>FormPotong.cs</DependentUpon>
@@ -122,9 +125,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormString.resx">
       <DependentUpon>FormString.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUtama.resx">
       <DependentUpon>FormUtama.cs</DependentUpon>

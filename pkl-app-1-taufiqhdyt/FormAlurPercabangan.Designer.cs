@@ -137,7 +137,7 @@ namespace pkl_app_1_taufiqhdyt
             this.label4.TabIndex = 8;
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // percabangan
+            // FormAlurPercabangan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -152,8 +152,9 @@ namespace pkl_app_1_taufiqhdyt
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "percabangan";
+            this.Name = "FormAlurPercabangan";
             this.Text = "percabangan";
+            this.Load += new System.EventHandler(this.FormAlurPercabangan_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

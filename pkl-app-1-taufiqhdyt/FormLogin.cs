@@ -10,34 +10,25 @@ using System.Windows.Forms;
 
 namespace pkl_app_1_taufiqhdyt
 {
-    public partial class Login : Form
+    public partial class FormLogin : Form
     {
-        public Login()
+        public FormLogin()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            var userId = textBox1.Text;
+            var username = textBox1.Text;
             var password = textBox2.Text;
 
-
-
-
-            if ((userId == "Fiks") && (password == "123"))
+            if ((username == "fiks") && (password == "1111"))
             {
-                
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Login Gagal");
+                MessageBox.Show("Maaf Login Gagal");
                 Application.Exit();
             }
         }
@@ -45,10 +36,6 @@ namespace pkl_app_1_taufiqhdyt
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
         }
     }
 }

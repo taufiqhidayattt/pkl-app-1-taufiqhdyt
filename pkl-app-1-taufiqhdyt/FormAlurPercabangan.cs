@@ -38,13 +38,8 @@ namespace pkl_app_1_taufiqhdyt
                 button3.Enabled = false;
                 button4.Enabled = false;
             }
-            if (waktu < 6) ;
-            {
-                label4.Text = "Waktu Hampir Habis";
 
-
-
-            }
+          
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -109,6 +104,11 @@ namespace pkl_app_1_taufiqhdyt
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormAlurPercabangan_Load(object sender, EventArgs e)
         {
 
         }
