@@ -1,7 +1,7 @@
 ﻿
 namespace pkl_app_1_taufiqhdyt
 {
-    partial class Form1
+    partial class stopwatch
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,20 @@ namespace pkl_app_1_taufiqhdyt
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // stopwatch
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Name = "stopwatch";
+            this.Text = "stopwatch";
+            this.Load += new System.EventHandler(this.stopwatch_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
     }
 }
-

@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace pkl_app_1_taufiqhdyt
 {
-    public partial class Form1 : Form
+    public partial class stopwatch: Form
     {
-        public Form1()
+        public stopwatch()
         {
             InitializeComponent();
+        }
+
+        private void stopwatch_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

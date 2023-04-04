@@ -46,14 +46,98 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="kalkulator.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="kalkulator.Designer.cs">
+      <DependentUpon>kalkulator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="percabangan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="percabangan.Designer.cs">
+      <DependentUpon>percabangan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Potong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Potong.Designer.cs">
+      <DependentUpon>Potong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sequential.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sequential.Designer.cs">
+      <DependentUpon>sequential.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stopwatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stopwatch.Designer.cs">
+      <DependentUpon>stopwatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Umur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Umur.Designer.cs">
+      <DependentUpon>Umur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formnumerik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formnumerik.Designer.cs">
+      <DependentUpon>Formnumerik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormString.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormString.Designer.cs">
+      <DependentUpon>FormString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUtama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUtama.Designer.cs">
+      <DependentUpon>FormUtama.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="kalkulator.resx">
+      <DependentUpon>kalkulator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="percabangan.resx">
+      <DependentUpon>percabangan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Potong.resx">
+      <DependentUpon>Potong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sequential.resx">
+      <DependentUpon>sequential.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stopwatch.resx">
+      <DependentUpon>stopwatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Umur.resx">
+      <DependentUpon>Umur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formnumerik.resx">
+      <DependentUpon>Formnumerik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormString.resx">
+      <DependentUpon>FormString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUtama.resx">
+      <DependentUpon>FormUtama.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
