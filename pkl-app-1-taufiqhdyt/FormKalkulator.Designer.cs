@@ -305,7 +305,7 @@ namespace pkl_app_1_taufiqhdyt
             this.button19.UseVisualStyleBackColor = false;
             this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
-            // kalkulator
+            // FormKalkulator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -331,7 +331,7 @@ namespace pkl_app_1_taufiqhdyt
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Name = "kalkulator";
+            this.Name = "FormKalkulator";
             this.Text = "kalkulator";
             this.ResumeLayout(false);
             this.PerformLayout();
