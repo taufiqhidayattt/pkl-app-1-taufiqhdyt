@@ -70,12 +70,8 @@ namespace pkl_app_1_taufiqhdyt
             from.Show();
         }
 
-        private void stopwatchToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var from = new stopwatch();
-            from.MdiParent = this;
-            from.Show();
-        }
+       
+        
 
         private void alurSequentialToolStripMenuItem_Click(object sender, EventArgs e)
         {
