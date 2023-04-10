@@ -39,6 +39,13 @@ namespace pkl_app_1_taufiqhdyt
                 button4.Enabled = false;
             }
 
+            if (waktu <= 5)
+            {
+                label4.Text = "Waktu Hampir Habis";
+
+            }
+
+            
           
         }
 

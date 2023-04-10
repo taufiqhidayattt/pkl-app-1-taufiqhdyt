@@ -52,5 +52,12 @@ namespace pkl_app_1_taufiqhdyt
         {
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            textBox2.Text = $"Budi membeli 7 buat Apel dan 5 Mangga. Harga apel adalah 1500 rupiah per buah. " +
+                $"Sedangkan harga Mangga adalah 1300 per buah. Toko mengenakan biaya 200 rupiah untuk tiap plastik yang digunakan belanja." +
+                $"Jika Belanjaan Budi hanya membutuhkan 1 kantong plastik dan dia membawa selembar uang 50.000, maka hitung nilai kembalian yang diterima budi.";
+        }
     }
 }

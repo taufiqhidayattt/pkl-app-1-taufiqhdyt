@@ -38,7 +38,7 @@ namespace pkl_app_1_taufiqhdyt
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(346, 84);
+            this.label1.Location = new System.Drawing.Point(70, 74);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 0;
@@ -47,7 +47,7 @@ namespace pkl_app_1_taufiqhdyt
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(349, 101);
+            this.dateTimePicker1.Location = new System.Drawing.Point(73, 91);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 1;
@@ -55,7 +55,7 @@ namespace pkl_app_1_taufiqhdyt
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(349, 128);
+            this.button1.Location = new System.Drawing.Point(73, 118);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -66,22 +66,22 @@ namespace pkl_app_1_taufiqhdyt
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(349, 158);
+            this.label2.Location = new System.Drawing.Point(73, 148);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 3;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // Umur
+            // FormUmur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(338, 260);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label1);
-            this.Name = "Umur";
+            this.Name = "FormUmur";
             this.Text = "FormTanggal";
             this.ResumeLayout(false);
             this.PerformLayout();

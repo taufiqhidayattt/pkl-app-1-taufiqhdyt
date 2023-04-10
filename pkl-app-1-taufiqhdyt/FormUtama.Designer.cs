@@ -29,6 +29,7 @@ namespace pkl_app_1_taufiqhdyt
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUtama));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.latihanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stringNamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,6 +45,8 @@ namespace pkl_app_1_taufiqhdyt
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
+            this.menuStrip1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("menuStrip1.BackgroundImage")));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.latihanToolStripMenuItem,
             this.tugasToolStripMenuItem});
@@ -56,6 +59,7 @@ namespace pkl_app_1_taufiqhdyt
             // 
             // latihanToolStripMenuItem
             // 
+            this.latihanToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.latihanToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.stringNamaToolStripMenuItem,
             this.numerikToolStripMenuItem,
@@ -63,6 +67,7 @@ namespace pkl_app_1_taufiqhdyt
             this.potongStringToolStripMenuItem,
             this.alurSequentialToolStripMenuItem,
             this.percabanganToolStripMenuItem});
+            this.latihanToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.latihanToolStripMenuItem.Name = "latihanToolStripMenuItem";
             this.latihanToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.latihanToolStripMenuItem.Text = "Latihan";
@@ -71,49 +76,51 @@ namespace pkl_app_1_taufiqhdyt
             // stringNamaToolStripMenuItem
             // 
             this.stringNamaToolStripMenuItem.Name = "stringNamaToolStripMenuItem";
-            this.stringNamaToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.stringNamaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.stringNamaToolStripMenuItem.Text = "String Nama";
             this.stringNamaToolStripMenuItem.Click += new System.EventHandler(this.stringNamaToolStripMenuItem_Click);
             // 
             // numerikToolStripMenuItem
             // 
             this.numerikToolStripMenuItem.Name = "numerikToolStripMenuItem";
-            this.numerikToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.numerikToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.numerikToolStripMenuItem.Text = "Numerik";
             this.numerikToolStripMenuItem.Click += new System.EventHandler(this.numerikToolStripMenuItem_Click);
             // 
             // umurToolStripMenuItem
             // 
             this.umurToolStripMenuItem.Name = "umurToolStripMenuItem";
-            this.umurToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.umurToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.umurToolStripMenuItem.Text = "Umur";
             this.umurToolStripMenuItem.Click += new System.EventHandler(this.umurToolStripMenuItem_Click);
             // 
             // potongStringToolStripMenuItem
             // 
             this.potongStringToolStripMenuItem.Name = "potongStringToolStripMenuItem";
-            this.potongStringToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.potongStringToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.potongStringToolStripMenuItem.Text = "Potong String";
             this.potongStringToolStripMenuItem.Click += new System.EventHandler(this.potongStringToolStripMenuItem_Click);
             // 
             // alurSequentialToolStripMenuItem
             // 
             this.alurSequentialToolStripMenuItem.Name = "alurSequentialToolStripMenuItem";
-            this.alurSequentialToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.alurSequentialToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.alurSequentialToolStripMenuItem.Text = "Alur Sequential";
             this.alurSequentialToolStripMenuItem.Click += new System.EventHandler(this.alurSequentialToolStripMenuItem_Click);
             // 
             // percabanganToolStripMenuItem
             // 
             this.percabanganToolStripMenuItem.Name = "percabanganToolStripMenuItem";
-            this.percabanganToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.percabanganToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.percabanganToolStripMenuItem.Text = "Percabangan";
             this.percabanganToolStripMenuItem.Click += new System.EventHandler(this.percabanganToolStripMenuItem_Click);
             // 
             // tugasToolStripMenuItem
             // 
+            this.tugasToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.tugasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.kalkulatorToolStripMenuItem});
+            this.tugasToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tugasToolStripMenuItem.Name = "tugasToolStripMenuItem";
             this.tugasToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.tugasToolStripMenuItem.Text = "Tugas";
@@ -121,7 +128,7 @@ namespace pkl_app_1_taufiqhdyt
             // kalkulatorToolStripMenuItem
             // 
             this.kalkulatorToolStripMenuItem.Name = "kalkulatorToolStripMenuItem";
-            this.kalkulatorToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.kalkulatorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.kalkulatorToolStripMenuItem.Text = "Kalkulator";
             this.kalkulatorToolStripMenuItem.Click += new System.EventHandler(this.kalkulatorToolStripMenuItem_Click);
             // 
@@ -130,6 +137,7 @@ namespace pkl_app_1_taufiqhdyt
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
