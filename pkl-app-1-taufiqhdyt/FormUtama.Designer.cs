@@ -40,89 +40,95 @@ namespace pkl_app_1_taufiqhdyt
             this.percabanganToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tugasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kalkulatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.formProcedureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
             this.menuStrip1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("menuStrip1.BackgroundImage")));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.latihanToolStripMenuItem,
             this.tugasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 27);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // latihanToolStripMenuItem
             // 
-            this.latihanToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.latihanToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.latihanToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.stringNamaToolStripMenuItem,
             this.numerikToolStripMenuItem,
             this.umurToolStripMenuItem,
             this.potongStringToolStripMenuItem,
             this.alurSequentialToolStripMenuItem,
-            this.percabanganToolStripMenuItem});
+            this.percabanganToolStripMenuItem,
+            this.formProcedureToolStripMenuItem});
+            this.latihanToolStripMenuItem.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
             this.latihanToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.latihanToolStripMenuItem.Name = "latihanToolStripMenuItem";
-            this.latihanToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.latihanToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 5, 4, 0);
+            this.latihanToolStripMenuItem.Size = new System.Drawing.Size(61, 23);
             this.latihanToolStripMenuItem.Text = "Latihan";
             this.latihanToolStripMenuItem.Click += new System.EventHandler(this.latihanToolStripMenuItem_Click);
             // 
             // stringNamaToolStripMenuItem
             // 
             this.stringNamaToolStripMenuItem.Name = "stringNamaToolStripMenuItem";
-            this.stringNamaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.stringNamaToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.stringNamaToolStripMenuItem.Text = "String Nama";
             this.stringNamaToolStripMenuItem.Click += new System.EventHandler(this.stringNamaToolStripMenuItem_Click);
             // 
             // numerikToolStripMenuItem
             // 
             this.numerikToolStripMenuItem.Name = "numerikToolStripMenuItem";
-            this.numerikToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.numerikToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.numerikToolStripMenuItem.Text = "Numerik";
             this.numerikToolStripMenuItem.Click += new System.EventHandler(this.numerikToolStripMenuItem_Click);
             // 
             // umurToolStripMenuItem
             // 
             this.umurToolStripMenuItem.Name = "umurToolStripMenuItem";
-            this.umurToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.umurToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.umurToolStripMenuItem.Text = "Umur";
             this.umurToolStripMenuItem.Click += new System.EventHandler(this.umurToolStripMenuItem_Click);
             // 
             // potongStringToolStripMenuItem
             // 
             this.potongStringToolStripMenuItem.Name = "potongStringToolStripMenuItem";
-            this.potongStringToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.potongStringToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.potongStringToolStripMenuItem.Text = "Potong String";
             this.potongStringToolStripMenuItem.Click += new System.EventHandler(this.potongStringToolStripMenuItem_Click);
             // 
             // alurSequentialToolStripMenuItem
             // 
             this.alurSequentialToolStripMenuItem.Name = "alurSequentialToolStripMenuItem";
-            this.alurSequentialToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.alurSequentialToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.alurSequentialToolStripMenuItem.Text = "Alur Sequential";
             this.alurSequentialToolStripMenuItem.Click += new System.EventHandler(this.alurSequentialToolStripMenuItem_Click);
             // 
             // percabanganToolStripMenuItem
             // 
             this.percabanganToolStripMenuItem.Name = "percabanganToolStripMenuItem";
-            this.percabanganToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.percabanganToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.percabanganToolStripMenuItem.Text = "Percabangan";
             this.percabanganToolStripMenuItem.Click += new System.EventHandler(this.percabanganToolStripMenuItem_Click);
             // 
             // tugasToolStripMenuItem
             // 
-            this.tugasToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.tugasToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.tugasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.kalkulatorToolStripMenuItem});
+            this.tugasToolStripMenuItem.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
             this.tugasToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tugasToolStripMenuItem.Name = "tugasToolStripMenuItem";
-            this.tugasToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.tugasToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 5, 4, 0);
+            this.tugasToolStripMenuItem.Size = new System.Drawing.Size(56, 23);
             this.tugasToolStripMenuItem.Text = "Tugas";
             // 
             // kalkulatorToolStripMenuItem
@@ -132,14 +138,23 @@ namespace pkl_app_1_taufiqhdyt
             this.kalkulatorToolStripMenuItem.Text = "Kalkulator";
             this.kalkulatorToolStripMenuItem.Click += new System.EventHandler(this.kalkulatorToolStripMenuItem_Click);
             // 
+            // formProcedureToolStripMenuItem
+            // 
+            this.formProcedureToolStripMenuItem.Name = "formProcedureToolStripMenuItem";
+            this.formProcedureToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.formProcedureToolStripMenuItem.Text = "FormProsedureFunction";
+            this.formProcedureToolStripMenuItem.Click += new System.EventHandler(this.formProcedureToolStripMenuItem_Click);
+            // 
             // FormUtama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
+            this.DoubleBuffered = true;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormUtama";
@@ -164,5 +179,6 @@ namespace pkl_app_1_taufiqhdyt
         private System.Windows.Forms.ToolStripMenuItem kalkulatorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem alurSequentialToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem percabanganToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem formProcedureToolStripMenuItem;
     }
 }

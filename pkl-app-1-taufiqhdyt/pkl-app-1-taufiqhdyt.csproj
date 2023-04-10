@@ -76,6 +76,12 @@
     <Compile Include="FormAlurSequential.Designer.cs">
       <DependentUpon>FormAlurSequential.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormProsedureFunction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProsedureFunction.Designer.cs">
+      <DependentUpon>FormProsedureFunction.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUmur.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAlurSequential.resx">
       <DependentUpon>FormAlurSequential.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProsedureFunction.resx">
+      <DependentUpon>FormProsedureFunction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUmur.resx">
       <DependentUpon>FormUmur.cs</DependentUpon>

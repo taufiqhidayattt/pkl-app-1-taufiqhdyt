@@ -72,6 +72,7 @@ namespace pkl_app_1_taufiqhdyt
             // 
             // textBox1
             // 
+            this.textBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(399, 185);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(92, 20);
@@ -82,7 +83,7 @@ namespace pkl_app_1_taufiqhdyt
             // 
             this.textBox2.Location = new System.Drawing.Point(399, 221);
             this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '.';
+            this.textBox2.PasswordChar = '•';
             this.textBox2.Size = new System.Drawing.Size(92, 20);
             this.textBox2.TabIndex = 4;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -91,10 +92,12 @@ namespace pkl_app_1_taufiqhdyt
             // button1
             // 
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(324, 254);
             this.button1.Name = "button1";
+            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.button1.Size = new System.Drawing.Size(167, 30);
             this.button1.TabIndex = 5;
             this.button1.Text = "Login";
@@ -114,6 +117,7 @@ namespace pkl_app_1_taufiqhdyt
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
@@ -122,6 +126,7 @@ namespace pkl_app_1_taufiqhdyt
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.DoubleBuffered = true;
             this.Name = "FormLogin";
             this.Text = "FormLogin";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

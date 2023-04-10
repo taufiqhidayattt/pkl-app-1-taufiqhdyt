@@ -86,5 +86,12 @@ namespace pkl_app_1_taufiqhdyt
             from.MdiParent = this;
             from.Show();
         }
+
+        private void formProcedureToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var from = new FormProsedureFunction();
+            from.MdiParent = this;
+            from.Show();
+        }
     }
 }
