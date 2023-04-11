@@ -100,5 +100,12 @@ namespace pkl_app_1_taufiqhdyt
             from.MdiParent = this;
             from.Show();
         }
+
+        private void formArray2DimensiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var from = new FormArray2Dimensi();
+            from.MdiParent = this;
+            from.Show();
+        }
     }
 }

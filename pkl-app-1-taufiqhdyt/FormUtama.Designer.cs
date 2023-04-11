@@ -39,9 +39,10 @@ namespace pkl_app_1_taufiqhdyt
             this.alurSequentialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.percabanganToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formProcedureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.formArrayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.formArray2DimensiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tugasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kalkulatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.formArrayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,7 +71,8 @@ namespace pkl_app_1_taufiqhdyt
             this.alurSequentialToolStripMenuItem,
             this.percabanganToolStripMenuItem,
             this.formProcedureToolStripMenuItem,
-            this.formArrayToolStripMenuItem});
+            this.formArrayToolStripMenuItem,
+            this.formArray2DimensiToolStripMenuItem});
             this.latihanToolStripMenuItem.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
             this.latihanToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.latihanToolStripMenuItem.Name = "latihanToolStripMenuItem";
@@ -128,6 +130,20 @@ namespace pkl_app_1_taufiqhdyt
             this.formProcedureToolStripMenuItem.Text = "FormProsedureFunction";
             this.formProcedureToolStripMenuItem.Click += new System.EventHandler(this.formProcedureToolStripMenuItem_Click);
             // 
+            // formArrayToolStripMenuItem
+            // 
+            this.formArrayToolStripMenuItem.Name = "formArrayToolStripMenuItem";
+            this.formArrayToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.formArrayToolStripMenuItem.Text = "FormArray";
+            this.formArrayToolStripMenuItem.Click += new System.EventHandler(this.formArrayToolStripMenuItem_Click);
+            // 
+            // formArray2DimensiToolStripMenuItem
+            // 
+            this.formArray2DimensiToolStripMenuItem.Name = "formArray2DimensiToolStripMenuItem";
+            this.formArray2DimensiToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.formArray2DimensiToolStripMenuItem.Text = "FormArray2Dimensi";
+            this.formArray2DimensiToolStripMenuItem.Click += new System.EventHandler(this.formArray2DimensiToolStripMenuItem_Click);
+            // 
             // tugasToolStripMenuItem
             // 
             this.tugasToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
@@ -146,13 +162,6 @@ namespace pkl_app_1_taufiqhdyt
             this.kalkulatorToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.kalkulatorToolStripMenuItem.Text = "Kalkulator";
             this.kalkulatorToolStripMenuItem.Click += new System.EventHandler(this.kalkulatorToolStripMenuItem_Click);
-            // 
-            // formArrayToolStripMenuItem
-            // 
-            this.formArrayToolStripMenuItem.Name = "formArrayToolStripMenuItem";
-            this.formArrayToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
-            this.formArrayToolStripMenuItem.Text = "FormArray";
-            this.formArrayToolStripMenuItem.Click += new System.EventHandler(this.formArrayToolStripMenuItem_Click);
             // 
             // FormUtama
             // 
@@ -190,5 +199,6 @@ namespace pkl_app_1_taufiqhdyt
         private System.Windows.Forms.ToolStripMenuItem percabanganToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem formProcedureToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem formArrayToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem formArray2DimensiToolStripMenuItem;
     }
 }
