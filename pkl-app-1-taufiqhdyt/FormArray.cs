@@ -19,7 +19,7 @@ namespace pkl_app_1_taufiqhdyt
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int[] bilGanjil = new int [10];
+            int[] bilGanjil = new int [15];
             var index = 0;
 
             for (var bilangan = numericUpDown1.Value; bilangan <= numericUpDown2.Value; bilangan++)
@@ -31,7 +31,7 @@ namespace pkl_app_1_taufiqhdyt
                     bilGanjil[index] = (int)bilangan;
                     index++;
 
-                    if (index >= 10) 
+                    if (index >= 15) 
                     break;
                 }
             }
