@@ -38,9 +38,10 @@ namespace pkl_app_1_taufiqhdyt
             this.potongStringToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alurSequentialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.percabanganToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.formProcedureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tugasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kalkulatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.formProcedureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.formArrayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,7 +69,8 @@ namespace pkl_app_1_taufiqhdyt
             this.potongStringToolStripMenuItem,
             this.alurSequentialToolStripMenuItem,
             this.percabanganToolStripMenuItem,
-            this.formProcedureToolStripMenuItem});
+            this.formProcedureToolStripMenuItem,
+            this.formArrayToolStripMenuItem});
             this.latihanToolStripMenuItem.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
             this.latihanToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.latihanToolStripMenuItem.Name = "latihanToolStripMenuItem";
@@ -119,6 +121,13 @@ namespace pkl_app_1_taufiqhdyt
             this.percabanganToolStripMenuItem.Text = "Percabangan";
             this.percabanganToolStripMenuItem.Click += new System.EventHandler(this.percabanganToolStripMenuItem_Click);
             // 
+            // formProcedureToolStripMenuItem
+            // 
+            this.formProcedureToolStripMenuItem.Name = "formProcedureToolStripMenuItem";
+            this.formProcedureToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.formProcedureToolStripMenuItem.Text = "FormProsedureFunction";
+            this.formProcedureToolStripMenuItem.Click += new System.EventHandler(this.formProcedureToolStripMenuItem_Click);
+            // 
             // tugasToolStripMenuItem
             // 
             this.tugasToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
@@ -134,16 +143,16 @@ namespace pkl_app_1_taufiqhdyt
             // kalkulatorToolStripMenuItem
             // 
             this.kalkulatorToolStripMenuItem.Name = "kalkulatorToolStripMenuItem";
-            this.kalkulatorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kalkulatorToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.kalkulatorToolStripMenuItem.Text = "Kalkulator";
             this.kalkulatorToolStripMenuItem.Click += new System.EventHandler(this.kalkulatorToolStripMenuItem_Click);
             // 
-            // formProcedureToolStripMenuItem
+            // formArrayToolStripMenuItem
             // 
-            this.formProcedureToolStripMenuItem.Name = "formProcedureToolStripMenuItem";
-            this.formProcedureToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
-            this.formProcedureToolStripMenuItem.Text = "FormProsedureFunction";
-            this.formProcedureToolStripMenuItem.Click += new System.EventHandler(this.formProcedureToolStripMenuItem_Click);
+            this.formArrayToolStripMenuItem.Name = "formArrayToolStripMenuItem";
+            this.formArrayToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.formArrayToolStripMenuItem.Text = "FormArray";
+            this.formArrayToolStripMenuItem.Click += new System.EventHandler(this.formArrayToolStripMenuItem_Click);
             // 
             // FormUtama
             // 
@@ -180,5 +189,6 @@ namespace pkl_app_1_taufiqhdyt
         private System.Windows.Forms.ToolStripMenuItem alurSequentialToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem percabanganToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem formProcedureToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem formArrayToolStripMenuItem;
     }
 }

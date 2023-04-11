@@ -93,5 +93,12 @@ namespace pkl_app_1_taufiqhdyt
             from.MdiParent = this;
             from.Show();
         }
+
+        private void formArrayToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var from = new FormArray();
+            from.MdiParent = this;
+            from.Show();
+        }
     }
 }
