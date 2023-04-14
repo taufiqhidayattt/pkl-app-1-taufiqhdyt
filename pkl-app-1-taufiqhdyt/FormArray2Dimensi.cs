@@ -48,6 +48,7 @@ namespace pkl_app_1_taufiqhdyt
                     if (IsGenap(x) && IsGenap(y))
                         warna = terang;
 
+
                     kotakCatur[x, y] = warna;
 
 

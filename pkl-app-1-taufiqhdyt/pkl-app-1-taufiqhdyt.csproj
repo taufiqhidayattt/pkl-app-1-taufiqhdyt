@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAnimasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAnimasi.Designer.cs">
+      <DependentUpon>FormAnimasi.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormArray.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,12 @@
     </Compile>
     <Compile Include="FormArray2Dimensi.Designer.cs">
       <DependentUpon>FormArray2Dimensi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGraphic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGraphic.Designer.cs">
+      <DependentUpon>FormGraphic.cs</DependentUpon>
     </Compile>
     <Compile Include="FormKalkulator.cs">
       <SubType>Form</SubType>
@@ -118,13 +130,20 @@
     <Compile Include="FormUtama.Designer.cs">
       <DependentUpon>FormUtama.cs</DependentUpon>
     </Compile>
+    <Compile Include="pictureBox1\Invalidate.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAnimasi.resx">
+      <DependentUpon>FormAnimasi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormArray.resx">
       <DependentUpon>FormArray.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormArray2Dimensi.resx">
       <DependentUpon>FormArray2Dimensi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGraphic.resx">
+      <DependentUpon>FormGraphic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormKalkulator.resx">
       <DependentUpon>FormKalkulator.cs</DependentUpon>

@@ -107,5 +107,19 @@ namespace pkl_app_1_taufiqhdyt
             from.MdiParent = this;
             from.Show();
         }
+
+        private void grapicToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var from = new FormGraphic();
+            from.MdiParent = this;
+            from.Show();
+        }
+
+        private void formAnimasiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var from = new FormAnimasi();
+            from.MdiParent = this;
+            from.Show();
+        }
     }
 }

@@ -43,6 +43,8 @@ namespace pkl_app_1_taufiqhdyt
             this.formArray2DimensiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tugasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kalkulatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.grapicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.formAnimasiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,7 +74,9 @@ namespace pkl_app_1_taufiqhdyt
             this.percabanganToolStripMenuItem,
             this.formProcedureToolStripMenuItem,
             this.formArrayToolStripMenuItem,
-            this.formArray2DimensiToolStripMenuItem});
+            this.formArray2DimensiToolStripMenuItem,
+            this.grapicToolStripMenuItem,
+            this.formAnimasiToolStripMenuItem});
             this.latihanToolStripMenuItem.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
             this.latihanToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.latihanToolStripMenuItem.Name = "latihanToolStripMenuItem";
@@ -163,6 +167,20 @@ namespace pkl_app_1_taufiqhdyt
             this.kalkulatorToolStripMenuItem.Text = "Kalkulator";
             this.kalkulatorToolStripMenuItem.Click += new System.EventHandler(this.kalkulatorToolStripMenuItem_Click);
             // 
+            // grapicToolStripMenuItem
+            // 
+            this.grapicToolStripMenuItem.Name = "grapicToolStripMenuItem";
+            this.grapicToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.grapicToolStripMenuItem.Text = "Grapic";
+            this.grapicToolStripMenuItem.Click += new System.EventHandler(this.grapicToolStripMenuItem_Click);
+            // 
+            // formAnimasiToolStripMenuItem
+            // 
+            this.formAnimasiToolStripMenuItem.Name = "formAnimasiToolStripMenuItem";
+            this.formAnimasiToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.formAnimasiToolStripMenuItem.Text = "FormAnimasi";
+            this.formAnimasiToolStripMenuItem.Click += new System.EventHandler(this.formAnimasiToolStripMenuItem_Click);
+            // 
             // FormUtama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,5 +218,7 @@ namespace pkl_app_1_taufiqhdyt
         private System.Windows.Forms.ToolStripMenuItem formProcedureToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem formArrayToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem formArray2DimensiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem grapicToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem formAnimasiToolStripMenuItem;
     }
 }
