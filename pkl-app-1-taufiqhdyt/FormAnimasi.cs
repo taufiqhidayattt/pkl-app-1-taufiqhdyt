@@ -12,75 +12,72 @@ namespace pkl_app_1_taufiqhdyt
 {
     public partial class FormAnimasi : Form
     {
-        private Bitmap kanvas = null;
-        private const int JUMLAH_KOTAK = 40;
-        private const int UKURAN_KOTAK = 8;
+        private const int UKURANPAPAN = 30;
+        private const int UKURANKOTAK = 10;
 
+        private Bitmap kanvas = null;
         private int actorX = 0;
         private int actorY = 0;
 
         private string arah = "kanan";
+
+        private int foodX = 21;
+        private int foodY = 15;
+
+        private int score = 0;
+
         public FormAnimasi()
         {
             InitializeComponent();
-            DrawKotak();
-            DrawAktor();
-            DrawMakanan();
+            DrawPapan();
+            pictureBox1.Invalidate();
         }
-        private void DrawKotak()
+        private void DrawPapan()
         {
             kanvas = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             using (var grafik = Graphics.FromImage(kanvas))
             {
-                for (var i = 0; i < JUMLAH_KOTAK; i++)
-                {
-                    for (var j = 0; j < JUMLAH_KOTAK; j++)
+                for (int x = 0; x < UKURANPAPAN; x++)
+                    for (int y = 0; y < UKURANPAPAN; y++)
                     {
                         var brush = new SolidBrush(Color.Azure);
-                        grafik.FillRectangle(brush, i * UKURAN_KOTAK, j * UKURAN_KOTAK, UKURAN_KOTAK, UKURAN_KOTAK);
+                        grafik.FillRectangle(brush, y * UKURANKOTAK, x * UKURANKOTAK, UKURANKOTAK, UKURANKOTAK);
 
-                        var pen = new Pen(Color.Azure);
-                        grafik.DrawRectangle(pen, i * UKURAN_KOTAK, j * UKURAN_KOTAK, UKURAN_KOTAK, UKURAN_KOTAK);
                     }
-                }
             }
         }
-        private void DrawAktor()
+
+        private void DrawActor()
         {
+            if (kanvas is null) return;
             using (var grafik = Graphics.FromImage(kanvas))
             {
-                var brush = new SolidBrush(Color.DarkTurquoise);
-                grafik.FillRectangle(brush, actorX * UKURAN_KOTAK, actorY * UKURAN_KOTAK, UKURAN_KOTAK, UKURAN_KOTAK);
+                var brush = new SolidBrush(Color.Navy);
+                grafik.FillRectangle(brush, actorX * UKURANKOTAK, actorY * UKURANKOTAK, UKURANKOTAK, UKURANKOTAK);
             }
         }
-
-        private void DrawMakanan()
+        private void DrawFood()
         {
+            if (kanvas is null) return;
             using (var grafik = Graphics.FromImage(kanvas))
             {
-                var brush = new SolidBrush(Color.DarkTurquoise);
-                grafik.FillRectangle(brush, actorX * UKURAN_KOTAK, actorY * UKURAN_KOTAK, UKURAN_KOTAK, UKURAN_KOTAK);
+                var brush = new SolidBrush(Color.Red);
+                grafik.FillEllipse(brush, foodX * UKURANKOTAK, foodX * UKURANKOTAK, UKURANKOTAK, UKURANKOTAK);
             }
-
         }
-     
 
-     
+
+
+
+
 
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
-            if (kanvas == null)
+
+            if (kanvas is null) 
                 return;
-
-            e.Graphics.DrawImage(kanvas, 10, 10);
+            e.Graphics.DrawImage(kanvas, 20, 20);
         }
-
-    
-        
-
-       
-
-
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -91,11 +88,11 @@ namespace pkl_app_1_taufiqhdyt
         {
             switch (arah)
             {
-                case "kanan":
-                    actorX++;
-                    break;
                 case "kiri":
                     actorX--;
+                    break;
+                case "kanan":
+                    actorX++;
                     break;
                 case "atas":
                     actorY--;
@@ -105,35 +102,105 @@ namespace pkl_app_1_taufiqhdyt
                     break;
             }
 
-            if (actorX > JUMLAH_KOTAK - 1)
+            if (actorX > UKURANPAPAN - 1)
                 actorX = 0;
             if (actorX < 0)
-                actorX = JUMLAH_KOTAK;
-            if (actorY == JUMLAH_KOTAK)
+                actorX = UKURANPAPAN - 1;
+
+            if (actorY > UKURANPAPAN - 1)
                 actorY = 0;
             if (actorY < 0)
-                actorY = JUMLAH_KOTAK;
+                actorY = UKURANPAPAN - 1;
 
-            DrawKotak();
-            DrawAktor();
+            //label1.Text = $"{arah}: {actorX}, {actorY}";
+            label2.Text = $"{score}";
+            label3.Text = $"Score:";
+
+
+            DrawPapan();
+            DrawActor();
+
+            if (ApakahActorMakanFood())
+            {
+                RandomFood();
+                score++;
+            }
+
+            DrawFood();
+
             pictureBox1.Invalidate();
         }
+        private bool ApakahActorMakanFood()
+        {
+            if (actorX == foodX && actorY == foodY)
+                return true;
+            return false;
+        }
+
+        private void RandomFood()
+        {
+            Random randomX = new Random();
+            foodX = randomX.Next(0, UKURANPAPAN);
+
+            Random randomY = new Random();
+            foodY = randomY.Next(0, UKURANPAPAN);
+            timer2.Stop();
+            timer2.Start();
+        }
+
 
         private void FormAnimasi_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.D)
-                arah = "kanan";
-            if (e.KeyCode == Keys.A)
-                arah = "kiri";
-            if (e.KeyCode == Keys.W)
-                arah = "atas";
-            if (e.KeyCode == Keys.S)
-                arah = "bawah";
-        }
+            var x = e.KeyCode;
+            switch (e.KeyCode)
+            {
+                case Keys.W:
+                    arah = "atas";
+                    break; 
+                case Keys.A:
+                    arah = "kiri";
+                    break;
+                case Keys.S:
+                    arah = "bawah";
+                    break;             
+                case Keys.D:
+                    arah = "kanan";
+                    break;
+            }
+            }
 
         private void FormAnimasi_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
             e.IsInputKey = true;
+
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+
+            RandomFood();
+            DrawPapan();
+            DrawActor();
+            DrawFood();
+            pictureBox1.Invalidate();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
 
         }
     }
