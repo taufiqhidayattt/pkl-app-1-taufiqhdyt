@@ -112,7 +112,7 @@ namespace pkl_app_1_taufiqhdyt
             if (actorY < 0)
                 actorY = UKURANPAPAN - 1;
 
-            //label1.Text = $"{arah}: {actorX}, {actorY}";
+            label1.Text = $"{arah}: {actorX}, {actorY}";
             label2.Text = $"{score}";
             label3.Text = $"Score:";
 
