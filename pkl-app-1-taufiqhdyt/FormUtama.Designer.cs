@@ -41,10 +41,10 @@ namespace pkl_app_1_taufiqhdyt
             this.formProcedureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formArrayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formArray2DimensiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tugasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kalkulatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grapicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formAnimasiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tugasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kalkulatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +57,7 @@ namespace pkl_app_1_taufiqhdyt
             this.tugasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(962, 27);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -148,6 +148,20 @@ namespace pkl_app_1_taufiqhdyt
             this.formArray2DimensiToolStripMenuItem.Text = "FormArray2Dimensi";
             this.formArray2DimensiToolStripMenuItem.Click += new System.EventHandler(this.formArray2DimensiToolStripMenuItem_Click);
             // 
+            // grapicToolStripMenuItem
+            // 
+            this.grapicToolStripMenuItem.Name = "grapicToolStripMenuItem";
+            this.grapicToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.grapicToolStripMenuItem.Text = "Grapic";
+            this.grapicToolStripMenuItem.Click += new System.EventHandler(this.grapicToolStripMenuItem_Click);
+            // 
+            // formAnimasiToolStripMenuItem
+            // 
+            this.formAnimasiToolStripMenuItem.Name = "formAnimasiToolStripMenuItem";
+            this.formAnimasiToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.formAnimasiToolStripMenuItem.Text = "FormAnimasi";
+            this.formAnimasiToolStripMenuItem.Click += new System.EventHandler(this.formAnimasiToolStripMenuItem_Click);
+            // 
             // tugasToolStripMenuItem
             // 
             this.tugasToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
@@ -167,20 +181,6 @@ namespace pkl_app_1_taufiqhdyt
             this.kalkulatorToolStripMenuItem.Text = "Kalkulator";
             this.kalkulatorToolStripMenuItem.Click += new System.EventHandler(this.kalkulatorToolStripMenuItem_Click);
             // 
-            // grapicToolStripMenuItem
-            // 
-            this.grapicToolStripMenuItem.Name = "grapicToolStripMenuItem";
-            this.grapicToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
-            this.grapicToolStripMenuItem.Text = "Grapic";
-            this.grapicToolStripMenuItem.Click += new System.EventHandler(this.grapicToolStripMenuItem_Click);
-            // 
-            // formAnimasiToolStripMenuItem
-            // 
-            this.formAnimasiToolStripMenuItem.Name = "formAnimasiToolStripMenuItem";
-            this.formAnimasiToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
-            this.formAnimasiToolStripMenuItem.Text = "FormAnimasi";
-            this.formAnimasiToolStripMenuItem.Click += new System.EventHandler(this.formAnimasiToolStripMenuItem_Click);
-            // 
             // FormUtama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -188,7 +188,7 @@ namespace pkl_app_1_taufiqhdyt
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(962, 561);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
             this.IsMdiContainer = true;
