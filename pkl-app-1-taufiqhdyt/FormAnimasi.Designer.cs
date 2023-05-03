@@ -98,6 +98,102 @@ namespace pkl_app_1_taufiqhdyt
             this.label3.Text = "Score";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(591, 80);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(72, 30);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "ARAH";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox4.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.rat;
+            this.pictureBox4.Location = new System.Drawing.Point(695, 164);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(38, 34);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 10;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Visible = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox3.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.badan;
+            this.pictureBox3.Location = new System.Drawing.Point(651, 164);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(38, 34);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 9;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Visible = false;
+            // 
+            // life_3
+            // 
+            this.life_3.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.life;
+            this.life_3.Location = new System.Drawing.Point(680, 225);
+            this.life_3.Name = "life_3";
+            this.life_3.Size = new System.Drawing.Size(33, 33);
+            this.life_3.TabIndex = 8;
+            this.life_3.TabStop = false;
+            // 
+            // life_2
+            // 
+            this.life_2.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.life;
+            this.life_2.Location = new System.Drawing.Point(641, 225);
+            this.life_2.Name = "life_2";
+            this.life_2.Size = new System.Drawing.Size(33, 33);
+            this.life_2.TabIndex = 7;
+            this.life_2.TabStop = false;
+            // 
+            // life_1
+            // 
+            this.life_1.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.life;
+            this.life_1.Location = new System.Drawing.Point(602, 225);
+            this.life_1.Name = "life_1";
+            this.life_1.Size = new System.Drawing.Size(33, 33);
+            this.life_1.TabIndex = 6;
+            this.life_1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox2.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.Head1;
+            this.pictureBox2.Location = new System.Drawing.Point(607, 164);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(38, 34);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Aqua;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(573, 565);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(592, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "PLAY";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormAnimasi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
