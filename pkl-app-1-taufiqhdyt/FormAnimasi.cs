@@ -205,10 +205,12 @@ namespace pkl_app_1_taufiqhdyt
             using (var grafik = Graphics.FromImage(kanvas))
             {
                 var brush = new SolidBrush(Color.Red);
-                grafik.DrawString("Game Over!", new Font("Arial", 16), brush, new Point(20, 20));
+                grafik.DrawString("Game Over!", new Font("Latin", 30, FontStyle.Bold), brush, new Point(150, 150));
             }
 
         }
+
+       
 
         private bool ApakahActorMakanFood()
         {
