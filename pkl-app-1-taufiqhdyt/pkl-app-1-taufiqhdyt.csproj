@@ -224,5 +224,17 @@
   <ItemGroup>
     <None Include="Resources\life_white.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pxfuel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bodyyyy.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

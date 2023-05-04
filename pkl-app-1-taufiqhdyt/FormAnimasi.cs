@@ -50,7 +50,7 @@ namespace pkl_app_1_taufiqhdyt
                 for (int x = 0; x < BOARD_SIZE; x++)
                     for (int y = 0; y < BOARD_SIZE; y++)
                     {
-                        var brush = new SolidBrush(Color.LightCyan);
+                        var brush = new SolidBrush(Color.LavenderBlush);
                         grafik.FillRectangle(brush, y * SQUARE_SIZE, x * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
 
                         //var pen = new Pen(Color.PowderBlue);// (Color.PowderBlue);

@@ -143,6 +143,7 @@ namespace pkl_app_1_taufiqhdyt
             this.Controls.Add(this.Kepala);
             this.Controls.Add(this.pictureBox1);
             this.Name = "FormAnimasi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GAME SNAKE";
             this.Load += new System.EventHandler(this.FormAnimasi_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormAnimasi_KeyDown);
