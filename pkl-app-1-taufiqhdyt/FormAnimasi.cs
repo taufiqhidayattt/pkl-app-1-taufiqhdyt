@@ -50,7 +50,7 @@ namespace pkl_app_1_taufiqhdyt
                 for (int x = 0; x < BOARD_SIZE; x++)
                     for (int y = 0; y < BOARD_SIZE; y++)
                     {
-                        var brush = new SolidBrush(Color.LavenderBlush);
+                        var brush = new SolidBrush(Color.DarkGreen);
                         grafik.FillRectangle(brush, y * SQUARE_SIZE, x * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
 
                         //var pen = new Pen(Color.PowderBlue);// (Color.PowderBlue);
@@ -91,7 +91,7 @@ namespace pkl_app_1_taufiqhdyt
             using (var grafik = Graphics.FromImage(kanvas))
             {
                 var brush = new SolidBrush(Color.MediumSeaGreen);
-                grafik.FillRectangle(brush, foodX * SQUARE_SIZE, foodX * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
+                grafik.DrawImage(food.Image, foodX * SQUARE_SIZE - 0, foodY * SQUARE_SIZE - 0, 20, 20);
             }
         }
 
@@ -111,16 +111,16 @@ namespace pkl_app_1_taufiqhdyt
             switch (arah)
             { 
                 
-                case "atas":
+                case "Atas":
                     actorY--;
                     break;
-                case "kiri":
+                case "Kiri":
                     actorX--; 
                     break;
-                case "bawah":
+                case "Bawah":
                     actorY++;
                     break;
-                case "kanan":
+                case "Kanan":
                     actorX++;
                     break;
                
@@ -137,8 +137,8 @@ namespace pkl_app_1_taufiqhdyt
             if (actorY < 0)
                 actorY = BOARD_SIZE - 1;
 
-            label1.Text = $"{arah}: {actorX}, {actorY} | Score: {score}";
-
+            label2.Text = $"{arah}: {actorX}, {actorY}";
+            label3.Text = $"Score = {score}";
             DrawBoard();
 
             if (ApakahNabrakBody())
@@ -155,6 +155,7 @@ namespace pkl_app_1_taufiqhdyt
             DrawActor();
             DrawFood();
             Game_Update();
+            arah_snake();
 
             pictureBox1.Invalidate();
         }
@@ -174,6 +175,31 @@ namespace pkl_app_1_taufiqhdyt
                 life_3.Image = Properties.Resources.life_white;
                 GameOver();
             }
+        }
+
+        void arah_snake()
+        {
+
+            if (arah == "Atas")
+            {
+                Kepala.Image = Properties.Resources.Atas;
+            }
+            if (arah == "Kiri")
+            {
+                Kepala.Image = Properties.Resources.kiri;
+            }
+            if (arah == "Bawah")
+            {
+                Kepala.Image = Properties.Resources.Bawah;
+            }
+            if (arah == "kanan")
+            {
+                Kepala.Image = Properties.Resources.kanan;
+            }
+
+
+
+
         }
 
         void Game_Update()
@@ -204,7 +230,7 @@ namespace pkl_app_1_taufiqhdyt
             timer2.Enabled = false;
             using (var grafik = Graphics.FromImage(kanvas))
             {
-                var brush = new SolidBrush(Color.Red);
+                var brush = new SolidBrush(Color.DarkRed);
                 grafik.DrawString("Game Over!", new Font("Latin", 30, FontStyle.Bold), brush, new Point(150, 150));
             }
 
@@ -270,6 +296,21 @@ namespace pkl_app_1_taufiqhdyt
         }
 
         private void FormAnimasi_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
