@@ -257,5 +257,35 @@
   <ItemGroup>
     <None Include="Resources\kiri.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pxfuel1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\death.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gameover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Head3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kanan1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kiri1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\life1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pxfuel2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

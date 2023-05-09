@@ -39,26 +39,31 @@ namespace pkl_app_1_taufiqhdyt
         {
             InitializeComponent();
             DrawBoard();
+            DrawActor();
+            DrawFood();
             pictureBox1.Invalidate();
         }
 
         private void DrawBoard()
         {
+
             kanvas = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             using (var grafik = Graphics.FromImage(kanvas))
             {
-                for (int x = 0; x < BOARD_SIZE; x++)
-                    for (int y = 0; y < BOARD_SIZE; y++)
+                grafik.DrawImage(Properties.Resources.background1, 0, 0, kanvas.Width, kanvas.Height);
+                for (var i = 0; i < BOARD_SIZE; i++)
+                {
+                    for (var j = 0; j < BOARD_SIZE; j++)
                     {
-                        var brush = new SolidBrush(Color.DarkGreen);
-                        grafik.FillRectangle(brush, y * SQUARE_SIZE, x * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
+                        //var brush = new SolidBrush(Color.DarkGreen);
+                        // grafik.FillRectangle(brush, y * SQUARE_SIZE, x * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
 
                         //var pen = new Pen(Color.PowderBlue);// (Color.PowderBlue);
                         //grafik.DrawRectangle(pen, y * SQUARE_SIZE, x * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
                     }
+                }
             }
         }
-
 
 
         private void DrawActor()
@@ -91,7 +96,7 @@ namespace pkl_app_1_taufiqhdyt
             using (var grafik = Graphics.FromImage(kanvas))
             {
                 var brush = new SolidBrush(Color.MediumSeaGreen);
-                grafik.DrawImage(food.Image, foodX * SQUARE_SIZE - 0, foodY * SQUARE_SIZE - 0, 20, 20);
+                grafik.DrawImage(food.Image, foodX * SQUARE_SIZE - 0, foodY * SQUARE_SIZE - 0, 25, 25);
             }
         }
 
@@ -176,6 +181,14 @@ namespace pkl_app_1_taufiqhdyt
                 GameOver();
             }
         }
+        private void RestartLive()
+        {
+            life = 0;
+            life_1.Image = Properties.Resources.life;
+            life_2.Image = Properties.Resources.life;
+            life_3.Image = Properties.Resources.life;
+
+        }
 
         void arah_snake()
         {
@@ -192,15 +205,13 @@ namespace pkl_app_1_taufiqhdyt
             {
                 Kepala.Image = Properties.Resources.Bawah;
             }
-            if (arah == "kanan")
+            if (arah == "Kanan")
             {
                 Kepala.Image = Properties.Resources.kanan;
             }
 
-
-
-
         }
+
 
         void Game_Update()
         {
@@ -261,16 +272,16 @@ namespace pkl_app_1_taufiqhdyt
             switch (e.KeyCode)
             {
                 case Keys.W:
-                    arah = "atas";
+                    arah = "Atas";
                     break;
                 case Keys.A:
-                    arah = "kiri";
+                    arah = "Kiri";
                     break;
                 case Keys.S:
-                    arah = "bawah";
+                    arah = "Bawah";
                     break;      
                 case Keys.D:
-                    arah = "kanan";
+                    arah = "Kanan";
                     break;
             }
         }
@@ -314,5 +325,24 @@ namespace pkl_app_1_taufiqhdyt
         {
 
         }
+
+        private void button1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            e.IsInputKey = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            timer1.Enabled = true;
+            timer2.Enabled = true;
+            actorX = 0;
+            actorY = 0;
+            arah = "kanan";
+            panjang = 0;
+            score = 0;
+            RestartLive();
+            pictureBox1.Focus();
+        }
+    }
     }
 }

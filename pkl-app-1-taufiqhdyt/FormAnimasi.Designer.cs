@@ -35,6 +35,8 @@ namespace pkl_app_1_taufiqhdyt
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Board = new System.Windows.Forms.PictureBox();
             this.food = new System.Windows.Forms.PictureBox();
             this.life_3 = new System.Windows.Forms.PictureBox();
             this.life_2 = new System.Windows.Forms.PictureBox();
@@ -42,6 +44,7 @@ namespace pkl_app_1_taufiqhdyt
             this.Tubuh = new System.Windows.Forms.PictureBox();
             this.Kepala = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.Board)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.food)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.life_3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.life_2)).BeginInit();
@@ -53,19 +56,17 @@ namespace pkl_app_1_taufiqhdyt
             // 
             // timer1
             // 
-            this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // timer2
             // 
-            this.timer2.Enabled = true;
             this.timer2.Interval = 10000;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 7);
+            this.label1.Location = new System.Drawing.Point(180, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 30);
             this.label1.TabIndex = 2;
@@ -76,7 +77,7 @@ namespace pkl_app_1_taufiqhdyt
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(110, 7);
+            this.label2.Location = new System.Drawing.Point(98, 6);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 30);
             this.label2.TabIndex = 8;
@@ -86,12 +87,37 @@ namespace pkl_app_1_taufiqhdyt
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(26, 37);
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(248, 37);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(22, 30);
+            this.label3.Size = new System.Drawing.Size(17, 23);
             this.label3.TabIndex = 9;
             this.label3.Text = ".";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(3, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(89, 54);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "PLAY";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.button1_PreviewKeyDown);
+            // 
+            // Board
+            // 
+            this.Board.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.pxfuel1;
+            this.Board.Location = new System.Drawing.Point(602, 287);
+            this.Board.Name = "Board";
+            this.Board.Size = new System.Drawing.Size(49, 52);
+            this.Board.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Board.TabIndex = 11;
+            this.Board.TabStop = false;
+            this.Board.Visible = false;
             // 
             // food
             // 
@@ -147,7 +173,7 @@ namespace pkl_app_1_taufiqhdyt
             // 
             // Kepala
             // 
-            this.Kepala.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.kiri;
+            this.Kepala.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.kanan;
             this.Kepala.Location = new System.Drawing.Point(547, 287);
             this.Kepala.Name = "Kepala";
             this.Kepala.Size = new System.Drawing.Size(49, 52);
@@ -172,7 +198,9 @@ namespace pkl_app_1_taufiqhdyt
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(625, 749);
+            this.ClientSize = new System.Drawing.Size(600, 612);
+            this.Controls.Add(this.Board);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.food);
@@ -183,12 +211,14 @@ namespace pkl_app_1_taufiqhdyt
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Kepala);
             this.Controls.Add(this.pictureBox1);
+            this.KeyPreview = true;
             this.Name = "FormAnimasi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GAME SNAKE";
             this.Load += new System.EventHandler(this.FormAnimasi_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormAnimasi_KeyDown);
             this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.FormAnimasi_PreviewKeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.Board)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.food)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.life_3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.life_2)).EndInit();
@@ -215,5 +245,7 @@ namespace pkl_app_1_taufiqhdyt
         private System.Windows.Forms.PictureBox food;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox Board;
     }
 }
