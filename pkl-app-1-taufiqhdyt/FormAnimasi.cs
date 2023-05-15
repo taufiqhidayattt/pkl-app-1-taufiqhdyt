@@ -50,7 +50,7 @@ namespace pkl_app_1_taufiqhdyt
             kanvas = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             using (var grafik = Graphics.FromImage(kanvas))
             {
-                grafik.DrawImage(Properties.Resources.background1, 0, 0, kanvas.Width, kanvas.Height);
+                grafik.DrawImage(Properties.Resources.background, 0, 0, kanvas.Width, kanvas.Height);
                 for (var i = 0; i < BOARD_SIZE; i++)
                 {
                     for (var j = 0; j < BOARD_SIZE; j++)
@@ -337,7 +337,7 @@ namespace pkl_app_1_taufiqhdyt
             timer2.Enabled = true;
             actorX = 0;
             actorY = 0;
-            arah = "kanan";
+            arah = "Kanan";
             panjang = 0;
             score = 0;
             RestartLive();
@@ -345,4 +345,4 @@ namespace pkl_app_1_taufiqhdyt
         }
     }
     }
-}
+
