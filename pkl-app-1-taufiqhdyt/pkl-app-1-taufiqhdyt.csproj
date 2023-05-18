@@ -132,6 +132,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpaceInvaders\Classes\ActorModel.cs" />
+    <Compile Include="SpaceInvaders\Classes\BentengModel.cs" />
+    <Compile Include="SpaceInvaders\Classes\EnemyModel.cs" />
+    <Compile Include="SpaceInvaders\SpaceInvaders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpaceInvaders\SpaceInvaders.Designer.cs">
+      <DependentUpon>SpaceInvaders.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormAnimasi.resx">
       <DependentUpon>FormAnimasi.cs</DependentUpon>
     </EmbeddedResource>
@@ -184,6 +193,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SpaceInvaders\SpaceInvaders.resx">
+      <DependentUpon>SpaceInvaders.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -289,6 +301,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Latar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SpaceInvaders\Assets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\extra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pasto.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unity Asset Store - The Best Assets for Game Making.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quilt fabric, Largest selection of quilting fabrics- Free Quilt Patterns.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newww.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uy.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

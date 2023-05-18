@@ -50,7 +50,7 @@ namespace pkl_app_1_taufiqhdyt
             kanvas = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             using (var grafik = Graphics.FromImage(kanvas))
             {
-                grafik.DrawImage(Properties.Resources.background, 0, 0, kanvas.Width, kanvas.Height);
+                grafik.DrawImage(Properties.Resources.uy, 0, 0, kanvas.Width, kanvas.Height);
                 for (var i = 0; i < BOARD_SIZE; i++)
                 {
                     for (var j = 0; j < BOARD_SIZE; j++)
@@ -105,7 +105,7 @@ namespace pkl_app_1_taufiqhdyt
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
             if (kanvas is null) return;
-            e.Graphics.DrawImage(kanvas, 20, 20);
+            e.Graphics.DrawImage(kanvas, 10, 10);
         }
 
         private void timer1_Tick(object sender, EventArgs e)

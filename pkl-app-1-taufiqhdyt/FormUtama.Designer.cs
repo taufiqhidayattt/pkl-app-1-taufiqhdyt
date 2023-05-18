@@ -44,7 +44,10 @@ namespace pkl_app_1_taufiqhdyt
             this.grapicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formAnimasiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tugasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kalkulatorToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.kalkulatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.spaceInvadersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.spaceInvadersToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -166,20 +169,43 @@ namespace pkl_app_1_taufiqhdyt
             // 
             this.tugasToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.tugasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.kalkulatorToolStripMenuItem});
+            this.kalkulatorToolStripMenuItem1,
+            this.spaceInvadersToolStripMenuItem1});
             this.tugasToolStripMenuItem.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
             this.tugasToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tugasToolStripMenuItem.Name = "tugasToolStripMenuItem";
             this.tugasToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 5, 4, 0);
             this.tugasToolStripMenuItem.Size = new System.Drawing.Size(56, 23);
             this.tugasToolStripMenuItem.Text = "Tugas";
+            this.tugasToolStripMenuItem.Click += new System.EventHandler(this.tugasToolStripMenuItem_Click);
+            // 
+            // kalkulatorToolStripMenuItem1
+            // 
+            this.kalkulatorToolStripMenuItem1.Name = "kalkulatorToolStripMenuItem1";
+            this.kalkulatorToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.kalkulatorToolStripMenuItem1.Text = "Kalkulator";
+            this.kalkulatorToolStripMenuItem1.Click += new System.EventHandler(this.kalkulatorToolStripMenuItem1_Click);
             // 
             // kalkulatorToolStripMenuItem
             // 
             this.kalkulatorToolStripMenuItem.Name = "kalkulatorToolStripMenuItem";
-            this.kalkulatorToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.kalkulatorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.kalkulatorToolStripMenuItem.Text = "Kalkulator";
             this.kalkulatorToolStripMenuItem.Click += new System.EventHandler(this.kalkulatorToolStripMenuItem_Click);
+            // 
+            // spaceInvadersToolStripMenuItem
+            // 
+            this.spaceInvadersToolStripMenuItem.Name = "spaceInvadersToolStripMenuItem";
+            this.spaceInvadersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.spaceInvadersToolStripMenuItem.Text = "SpaceInvaders";
+            this.spaceInvadersToolStripMenuItem.Click += new System.EventHandler(this.spaceInvadersToolStripMenuItem_Click);
+            // 
+            // spaceInvadersToolStripMenuItem1
+            // 
+            this.spaceInvadersToolStripMenuItem1.Name = "spaceInvadersToolStripMenuItem1";
+            this.spaceInvadersToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.spaceInvadersToolStripMenuItem1.Text = "SpaceInvaders";
+            this.spaceInvadersToolStripMenuItem1.Click += new System.EventHandler(this.spaceInvadersToolStripMenuItem1_Click);
             // 
             // FormUtama
             // 
@@ -220,5 +246,8 @@ namespace pkl_app_1_taufiqhdyt
         private System.Windows.Forms.ToolStripMenuItem formArray2DimensiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem grapicToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem formAnimasiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem spaceInvadersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kalkulatorToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem spaceInvadersToolStripMenuItem1;
     }
 }
