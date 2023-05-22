@@ -14,7 +14,7 @@ namespace pkl_app_1_taufiqhdyt
     {
         private Bitmap canvas = null;
         const int SPACE_BOARD_WIDTH = 80;
-        const int SPACE_BOARD_HEIGHT = 40;
+        const int SPACE_BOARD_HEIGHT = 50;
         const int SQUARE_SIZE = 10;
         private List<EnemyModel> _listEnemy;
         private List<BentengModel> _listBenteng;
@@ -111,21 +111,7 @@ namespace pkl_app_1_taufiqhdyt
                     Brush brush = null;
                     switch (benteng.DefencePower)
                     {
-                        case 5:
-                            brush = new SolidBrush(Color.Aquamarine);
-                            break;
-                        case 4:
-                            brush = new SolidBrush(Color.Turquoise);
-                            break;
-                        case 3:
-                            brush = new SolidBrush(Color.LightSeaGreen);
-                            break;
-                        case 2:
-                            brush = new SolidBrush(Color.Teal);
-                            break;
-                        case 1:
-                            brush = new SolidBrush(Color.FromArgb(0, 40, 40));
-                            break;
+                       
                         default:
                             brush = new SolidBrush(Color.DarkSlateGray);
                             break;
@@ -140,7 +126,7 @@ namespace pkl_app_1_taufiqhdyt
         private void CreateEnemyObject()
         {
             const int WIDTH = 4;
-            const int HEIGHT = 3;
+            const int HEIGHT = 4;
 
             //  enemy level-3 (paling atas)
             for (var i = 1; i <= 9; i++)
@@ -233,7 +219,7 @@ namespace pkl_app_1_taufiqhdyt
             {
                 Gambar = ActorPic.Image,
                 Width = 6,
-                Height = 3,
+                Height = 4,
                 PosX = 0,
                 PosY = 36,
             };

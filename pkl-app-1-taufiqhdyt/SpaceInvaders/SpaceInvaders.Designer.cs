@@ -124,7 +124,7 @@ namespace pkl_app_1_taufiqhdyt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 450);
+            this.ClientSize = new System.Drawing.Size(801, 409);
             this.Controls.Add(this.Enemy4Pic);
             this.Controls.Add(this.ActorPic);
             this.Controls.Add(this.Enemy3Pic);
