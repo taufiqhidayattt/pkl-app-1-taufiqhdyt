@@ -63,6 +63,16 @@ namespace pkl_app_1_taufiqhdyt.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap actorr {
+            get {
+                object obj = ResourceManager.GetObject("actorr", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Atas {
             get {
                 object obj = ResourceManager.GetObject("Atas", resourceCulture);
@@ -106,6 +116,16 @@ namespace pkl_app_1_taufiqhdyt.Properties {
         internal static System.Drawing.Bitmap Bawah {
             get {
                 object obj = ResourceManager.GetObject("Bawah", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Blue_alien {
+            get {
+                object obj = ResourceManager.GetObject("Blue_alien", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -206,6 +226,16 @@ namespace pkl_app_1_taufiqhdyt.Properties {
         internal static System.Drawing.Bitmap green {
             get {
                 object obj = ResourceManager.GetObject("green", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Green_alien {
+            get {
+                object obj = ResourceManager.GetObject("Green_alien", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -353,6 +383,26 @@ namespace pkl_app_1_taufiqhdyt.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap player_ship {
+            get {
+                object obj = ResourceManager.GetObject("player_ship", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap purple_alien {
+            get {
+                object obj = ResourceManager.GetObject("purple_alien", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pxfuel {
             get {
                 object obj = ResourceManager.GetObject("pxfuel", resourceCulture);
@@ -413,9 +463,29 @@ namespace pkl_app_1_taufiqhdyt.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Red_alien {
+            get {
+                object obj = ResourceManager.GetObject("Red_alien", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap snake_graphics {
             get {
                 object obj = ResourceManager.GetObject("snake-graphics", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap star_background_320x240px {
+            get {
+                object obj = ResourceManager.GetObject("star_background_320x240px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

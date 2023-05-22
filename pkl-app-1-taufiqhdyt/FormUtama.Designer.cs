@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace pkl_app_1_taufiqhdyt
 {
     partial class FormUtama
@@ -184,7 +186,7 @@ namespace pkl_app_1_taufiqhdyt
             this.kalkulatorToolStripMenuItem1.Name = "kalkulatorToolStripMenuItem1";
             this.kalkulatorToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.kalkulatorToolStripMenuItem1.Text = "Kalkulator";
-            this.kalkulatorToolStripMenuItem1.Click += new System.EventHandler(this.kalkulatorToolStripMenuItem1_Click);
+            this.kalkulatorToolStripMenuItem1.Click += new System.EventHandler(this.kalkulatorToolStripMenuItem_Click);
             // 
             // kalkulatorToolStripMenuItem
             // 
@@ -205,7 +207,7 @@ namespace pkl_app_1_taufiqhdyt
             this.spaceInvadersToolStripMenuItem1.Name = "spaceInvadersToolStripMenuItem1";
             this.spaceInvadersToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.spaceInvadersToolStripMenuItem1.Text = "SpaceInvaders";
-            this.spaceInvadersToolStripMenuItem1.Click += new System.EventHandler(this.spaceInvadersToolStripMenuItem1_Click);
+            this.spaceInvadersToolStripMenuItem1.Click += new System.EventHandler(this.spaceInvadersToolStripMenuItem_Click);
             // 
             // FormUtama
             // 
@@ -227,6 +229,11 @@ namespace pkl_app_1_taufiqhdyt
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void tugasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
         }
 
         #endregion

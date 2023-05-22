@@ -335,5 +335,26 @@
   <ItemGroup>
     <None Include="Resources\uy.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actorr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue_alien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green_alien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purple_alien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Red_alien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_ship.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star_background_320x240px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -30,13 +30,15 @@ namespace pkl_app_1_taufiqhdyt
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.EnemyMoveTimer = new System.Windows.Forms.Timer(this.components);
+            this.ActorMoveTimer = new System.Windows.Forms.Timer(this.components);
+            this.Enemy4Pic = new System.Windows.Forms.PictureBox();
             this.ActorPic = new System.Windows.Forms.PictureBox();
             this.Enemy3Pic = new System.Windows.Forms.PictureBox();
             this.Enemy2Pic = new System.Windows.Forms.PictureBox();
             this.Enemy1Pic = new System.Windows.Forms.PictureBox();
             this.SpaceBoard = new System.Windows.Forms.PictureBox();
-            this.EnemyMoveTimer = new System.Windows.Forms.Timer(this.components);
-            this.ActorMoveTimer = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.Enemy4Pic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActorPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Enemy3Pic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Enemy2Pic)).BeginInit();
@@ -44,19 +46,42 @@ namespace pkl_app_1_taufiqhdyt
             ((System.ComponentModel.ISupportInitialize)(this.SpaceBoard)).BeginInit();
             this.SuspendLayout();
             // 
+            // EnemyMoveTimer
+            // 
+            this.EnemyMoveTimer.Enabled = true;
+            this.EnemyMoveTimer.Interval = 500;
+            this.EnemyMoveTimer.Tick += new System.EventHandler(this.EnemyMoveTimer_Tick_1);
+            // 
+            // ActorMoveTimer
+            // 
+            this.ActorMoveTimer.Enabled = true;
+            this.ActorMoveTimer.Interval = 50;
+            this.ActorMoveTimer.Tick += new System.EventHandler(this.ActorMoveTimer_Tick_1);
+            // 
+            // Enemy4Pic
+            // 
+            this.Enemy4Pic.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.Blue_alien;
+            this.Enemy4Pic.Location = new System.Drawing.Point(207, 412);
+            this.Enemy4Pic.Name = "Enemy4Pic";
+            this.Enemy4Pic.Size = new System.Drawing.Size(40, 32);
+            this.Enemy4Pic.TabIndex = 10;
+            this.Enemy4Pic.TabStop = false;
+            this.Enemy4Pic.Visible = false;
+            // 
             // ActorPic
             // 
-            this.ActorPic.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.player;
+            this.ActorPic.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.player_ship;
             this.ActorPic.Location = new System.Drawing.Point(138, 412);
             this.ActorPic.Name = "ActorPic";
-            this.ActorPic.Size = new System.Drawing.Size(60, 32);
+            this.ActorPic.Size = new System.Drawing.Size(36, 32);
             this.ActorPic.TabIndex = 9;
             this.ActorPic.TabStop = false;
             this.ActorPic.Visible = false;
+            this.ActorPic.Click += new System.EventHandler(this.ActorPic_Click);
             // 
             // Enemy3Pic
             // 
-            this.Enemy3Pic.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.green;
+            this.Enemy3Pic.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.Green_alien;
             this.Enemy3Pic.Location = new System.Drawing.Point(92, 412);
             this.Enemy3Pic.Name = "Enemy3Pic";
             this.Enemy3Pic.Size = new System.Drawing.Size(40, 32);
@@ -66,7 +91,7 @@ namespace pkl_app_1_taufiqhdyt
             // 
             // Enemy2Pic
             // 
-            this.Enemy2Pic.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.yellow;
+            this.Enemy2Pic.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.purple_alien;
             this.Enemy2Pic.Location = new System.Drawing.Point(46, 412);
             this.Enemy2Pic.Name = "Enemy2Pic";
             this.Enemy2Pic.Size = new System.Drawing.Size(40, 32);
@@ -76,7 +101,7 @@ namespace pkl_app_1_taufiqhdyt
             // 
             // Enemy1Pic
             // 
-            this.Enemy1Pic.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.red;
+            this.Enemy1Pic.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.Red_alien;
             this.Enemy1Pic.Location = new System.Drawing.Point(0, 412);
             this.Enemy1Pic.Name = "Enemy1Pic";
             this.Enemy1Pic.Size = new System.Drawing.Size(40, 32);
@@ -95,23 +120,12 @@ namespace pkl_app_1_taufiqhdyt
             this.SpaceBoard.Click += new System.EventHandler(this.SpaceBoard_Click);
             this.SpaceBoard.Paint += new System.Windows.Forms.PaintEventHandler(this.SpaceBoard_Paint_1);
             // 
-            // EnemyMoveTimer
-            // 
-            this.EnemyMoveTimer.Enabled = true;
-            this.EnemyMoveTimer.Interval = 500;
-            this.EnemyMoveTimer.Tick += new System.EventHandler(this.EnemyMoveTimer_Tick_1);
-            // 
-            // ActorMoveTimer
-            // 
-            this.ActorMoveTimer.Enabled = true;
-            this.ActorMoveTimer.Interval = 50;
-            this.ActorMoveTimer.Tick += new System.EventHandler(this.ActorMoveTimer_Tick_1);
-            // 
             // SpaceInvaders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(812, 450);
+            this.Controls.Add(this.Enemy4Pic);
             this.Controls.Add(this.ActorPic);
             this.Controls.Add(this.Enemy3Pic);
             this.Controls.Add(this.Enemy2Pic);
@@ -122,6 +136,7 @@ namespace pkl_app_1_taufiqhdyt
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SpaceInvaders_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.SpaceInvaders_KeyUp);
             this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.SpaceInvaders_PreviewKeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.Enemy4Pic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActorPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Enemy3Pic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Enemy2Pic)).EndInit();
@@ -140,5 +155,6 @@ namespace pkl_app_1_taufiqhdyt
         private System.Windows.Forms.PictureBox SpaceBoard;
         private System.Windows.Forms.Timer EnemyMoveTimer;
         private System.Windows.Forms.Timer ActorMoveTimer;
+        private System.Windows.Forms.PictureBox Enemy4Pic;
     }
 }

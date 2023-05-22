@@ -128,24 +128,5 @@ namespace pkl_app_1_taufiqhdyt
             from.MdiParent = this;
             from.Show();
         }
-
-        private void tugasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void kalkulatorToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            var from = new FormKalkulator();
-            from.MdiParent = this;
-            from.Show();
-        }
-
-        private void spaceInvadersToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            var from = new SpaceInvaders();
-            from.MdiParent = this;
-            from.Show();
-        }
     }
 }

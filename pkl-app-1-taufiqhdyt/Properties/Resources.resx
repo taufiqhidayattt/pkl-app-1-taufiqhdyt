@@ -127,6 +127,9 @@
   <data name="Empty" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Empty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="player_ship" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\player_ship.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Head1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Head1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,14 +139,23 @@
   <data name="player" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\player.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="uy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\uy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Unity Asset Store - The Best Assets for Game Making" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Unity Asset Store - The Best Assets for Game Making.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="actorr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\actorr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DeadBody" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DeadBody.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="kiri1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kiri1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blue_alien" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blue_alien.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Start" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Start.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -165,6 +177,12 @@
   </data>
   <data name="Pasto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pasto.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Red_alien" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Red_alien.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Green_alien" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Green_alien.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Quilt fabric, Largest selection of quilting fabrics- Free Quilt Patterns" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Quilt fabric, Largest selection of quilting fabrics- Free Quilt Patterns.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -192,6 +210,9 @@
   </data>
   <data name="extra" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\extra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="purple_alien" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\purple_alien.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="life" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\life.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,7 +259,7 @@
   <data name="rat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rat1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="uy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\uy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="star_background_320x240px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\star_background_320x240px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -12,7 +12,7 @@ namespace pkl_app_1_taufiqhdyt
 {
     public partial class SpaceInvaders : Form
     {
-        private Bitmap _canvas = null;
+        private Bitmap canvas = null;
         const int SPACE_BOARD_WIDTH = 80;
         const int SPACE_BOARD_HEIGHT = 40;
         const int SQUARE_SIZE = 10;
@@ -45,17 +45,18 @@ namespace pkl_app_1_taufiqhdyt
 
         private void DrawBoard()
         {
-            _canvas = new Bitmap(SpaceBoard.Width, SpaceBoard.Height);
-            using (var grafik = Graphics.FromImage(_canvas))
+            canvas = new Bitmap(SpaceBoard.Width, SpaceBoard.Height);
+            using (var grafik = Graphics.FromImage(canvas))
             {
+                grafik.DrawImage(Properties.Resources.star_background_320x240px, 0, 0, canvas.Width, canvas.Height);
                 for (int x = 0; x < SPACE_BOARD_WIDTH; x++)
-                    for (int y = 0; y < SPACE_BOARD_HEIGHT; y++)
-                        grafik.DrawRectangle(new Pen(Color.DarkGreen), x * SQUARE_SIZE, y * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
+                    for (int y = 0; y < SPACE_BOARD_HEIGHT; y++) ;
+                       // grafik.DrawRectangle(new Pen(Color.DarkGreen), x * SQUARE_SIZE, y * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
             }
         }
         private void DrawEnemy()
         {
-            using (var grafik = Graphics.FromImage(_canvas))
+            using (var grafik = Graphics.FromImage(canvas))
             {
                 foreach (var enemy in _listEnemy)
                     grafik.DrawImage(enemy.Gambar, enemy.PosX * SQUARE_SIZE, enemy.PosY * SQUARE_SIZE, enemy.Width * SQUARE_SIZE, enemy.Height * SQUARE_SIZE);
@@ -63,7 +64,7 @@ namespace pkl_app_1_taufiqhdyt
         }
         private void DrawActor()
         {
-            using (var grafik = Graphics.FromImage(_canvas))
+            using (var grafik = Graphics.FromImage(canvas))
             {
                 grafik.DrawImage(_actor.Gambar, _actor.PosX * SQUARE_SIZE, _actor.PosY * SQUARE_SIZE, _actor.Width * SQUARE_SIZE, _actor.Height * SQUARE_SIZE);
             }
@@ -103,7 +104,7 @@ namespace pkl_app_1_taufiqhdyt
 
         private void DrawBenteng()
         {
-            using (var grafik = Graphics.FromImage(_canvas))
+            using (var grafik = Graphics.FromImage(canvas))
             {
                 foreach (var benteng in _listBenteng)
                 {
@@ -147,7 +148,7 @@ namespace pkl_app_1_taufiqhdyt
                 var newEnemy = new EnemyModel
                 {
                     Id = i,
-                    Gambar = Enemy3Pic.Image,
+                    Gambar = Enemy4Pic.Image,
                     IsAlive = true,
                     Width = WIDTH,
                     Height = HEIGHT,
@@ -163,7 +164,7 @@ namespace pkl_app_1_taufiqhdyt
                 var newEnemy = new EnemyModel
                 {
                     Id = i,
-                    Gambar = Enemy2Pic.Image,
+                    Gambar = Enemy1Pic.Image,
                     IsAlive = true,
                     Width = WIDTH,
                     Height = HEIGHT,
@@ -179,7 +180,7 @@ namespace pkl_app_1_taufiqhdyt
                 var newEnemy = new EnemyModel
                 {
                     Id = i,
-                    Gambar = Enemy1Pic.Image,
+                    Gambar = Enemy2Pic.Image,
                     IsAlive = true,
                     Width = WIDTH,
                     Height = HEIGHT,
@@ -195,7 +196,7 @@ namespace pkl_app_1_taufiqhdyt
                 var newEnemy = new EnemyModel
                 {
                     Id = i,
-                    Gambar = Enemy1Pic.Image,
+                    Gambar = Enemy3Pic.Image,
                     IsAlive = true,
                     Width = WIDTH,
                     Height = HEIGHT,
@@ -272,8 +273,8 @@ namespace pkl_app_1_taufiqhdyt
 
         private void SpaceBoard_Paint_1(object sender, PaintEventArgs e)
         {
-            if (_canvas is null) return;
-            e.Graphics.DrawImage(_canvas, 0, 0);
+            if (canvas is null) return;
+            e.Graphics.DrawImage(canvas, 0, 0);
         }
 
         private void SpaceInvaders_KeyDown(object sender, KeyEventArgs e)
@@ -297,6 +298,11 @@ namespace pkl_app_1_taufiqhdyt
         private void SpaceInvaders_KeyUp(object sender, KeyEventArgs e)
         {
             _arahActor = string.Empty;
+        }
+
+        private void ActorPic_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
