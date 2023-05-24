@@ -32,12 +32,15 @@ namespace pkl_app_1_taufiqhdyt
             this.components = new System.ComponentModel.Container();
             this.EnemyMoveTimer = new System.Windows.Forms.Timer(this.components);
             this.ActorMoveTimer = new System.Windows.Forms.Timer(this.components);
+            this.PeluruMove = new System.Windows.Forms.Timer(this.components);
+            this.PeluruPic = new System.Windows.Forms.PictureBox();
             this.Enemy4Pic = new System.Windows.Forms.PictureBox();
             this.ActorPic = new System.Windows.Forms.PictureBox();
             this.Enemy3Pic = new System.Windows.Forms.PictureBox();
             this.Enemy2Pic = new System.Windows.Forms.PictureBox();
             this.Enemy1Pic = new System.Windows.Forms.PictureBox();
             this.SpaceBoard = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.PeluruPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Enemy4Pic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActorPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Enemy3Pic)).BeginInit();
@@ -58,9 +61,25 @@ namespace pkl_app_1_taufiqhdyt
             this.ActorMoveTimer.Interval = 50;
             this.ActorMoveTimer.Tick += new System.EventHandler(this.ActorMoveTimer_Tick_1);
             // 
+            // PeluruMove
+            // 
+            this.PeluruMove.Enabled = true;
+            this.PeluruMove.Interval = 1;
+            this.PeluruMove.Tick += new System.EventHandler(this.PeluruMove_Tick);
+            // 
+            // PeluruPic
+            // 
+            this.PeluruPic.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.playerBullet;
+            this.PeluruPic.Location = new System.Drawing.Point(253, 412);
+            this.PeluruPic.Name = "PeluruPic";
+            this.PeluruPic.Size = new System.Drawing.Size(12, 32);
+            this.PeluruPic.TabIndex = 11;
+            this.PeluruPic.TabStop = false;
+            this.PeluruPic.Visible = false;
+            // 
             // Enemy4Pic
             // 
-            this.Enemy4Pic.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.Blue_alien;
+            this.Enemy4Pic.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.green;
             this.Enemy4Pic.Location = new System.Drawing.Point(207, 412);
             this.Enemy4Pic.Name = "Enemy4Pic";
             this.Enemy4Pic.Size = new System.Drawing.Size(40, 32);
@@ -70,10 +89,11 @@ namespace pkl_app_1_taufiqhdyt
             // 
             // ActorPic
             // 
-            this.ActorPic.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.player_ship;
+            this.ActorPic.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.actorr;
             this.ActorPic.Location = new System.Drawing.Point(138, 412);
             this.ActorPic.Name = "ActorPic";
             this.ActorPic.Size = new System.Drawing.Size(36, 32);
+            this.ActorPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ActorPic.TabIndex = 9;
             this.ActorPic.TabStop = false;
             this.ActorPic.Visible = false;
@@ -81,7 +101,7 @@ namespace pkl_app_1_taufiqhdyt
             // 
             // Enemy3Pic
             // 
-            this.Enemy3Pic.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.Green_alien;
+            this.Enemy3Pic.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.yellow;
             this.Enemy3Pic.Location = new System.Drawing.Point(92, 412);
             this.Enemy3Pic.Name = "Enemy3Pic";
             this.Enemy3Pic.Size = new System.Drawing.Size(40, 32);
@@ -91,7 +111,7 @@ namespace pkl_app_1_taufiqhdyt
             // 
             // Enemy2Pic
             // 
-            this.Enemy2Pic.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.purple_alien;
+            this.Enemy2Pic.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.red;
             this.Enemy2Pic.Location = new System.Drawing.Point(46, 412);
             this.Enemy2Pic.Name = "Enemy2Pic";
             this.Enemy2Pic.Size = new System.Drawing.Size(40, 32);
@@ -101,7 +121,7 @@ namespace pkl_app_1_taufiqhdyt
             // 
             // Enemy1Pic
             // 
-            this.Enemy1Pic.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.Red_alien;
+            this.Enemy1Pic.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.extra;
             this.Enemy1Pic.Location = new System.Drawing.Point(0, 412);
             this.Enemy1Pic.Name = "Enemy1Pic";
             this.Enemy1Pic.Size = new System.Drawing.Size(40, 32);
@@ -124,7 +144,8 @@ namespace pkl_app_1_taufiqhdyt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 409);
+            this.ClientSize = new System.Drawing.Size(801, 433);
+            this.Controls.Add(this.PeluruPic);
             this.Controls.Add(this.Enemy4Pic);
             this.Controls.Add(this.ActorPic);
             this.Controls.Add(this.Enemy3Pic);
@@ -136,6 +157,7 @@ namespace pkl_app_1_taufiqhdyt
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SpaceInvaders_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.SpaceInvaders_KeyUp);
             this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.SpaceInvaders_PreviewKeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.PeluruPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Enemy4Pic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActorPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Enemy3Pic)).EndInit();
@@ -156,5 +178,7 @@ namespace pkl_app_1_taufiqhdyt
         private System.Windows.Forms.Timer EnemyMoveTimer;
         private System.Windows.Forms.Timer ActorMoveTimer;
         private System.Windows.Forms.PictureBox Enemy4Pic;
+        private System.Windows.Forms.PictureBox PeluruPic;
+        private System.Windows.Forms.Timer PeluruMove;
     }
 }

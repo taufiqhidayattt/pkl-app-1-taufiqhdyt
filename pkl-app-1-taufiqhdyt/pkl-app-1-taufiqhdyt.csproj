@@ -135,6 +135,7 @@
     <Compile Include="SpaceInvaders\Classes\ActorModel.cs" />
     <Compile Include="SpaceInvaders\Classes\BentengModel.cs" />
     <Compile Include="SpaceInvaders\Classes\EnemyModel.cs" />
+    <Compile Include="SpaceInvaders\Classes\PeluruModel.cs" />
     <Compile Include="SpaceInvaders\SpaceInvaders.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -355,6 +356,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\star_background_320x240px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bunker1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\playerBullet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\groundHighres.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

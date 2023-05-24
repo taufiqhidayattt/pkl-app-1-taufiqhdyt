@@ -21,6 +21,7 @@ namespace pkl_app_1_taufiqhdyt
         private ActorModel _actor;
         private string _arahEnemy = "left";
         private string _arahActor = "";
+        private PeluruModel _peluruActor;
         public SpaceInvaders()
         {
 
@@ -28,10 +29,13 @@ namespace pkl_app_1_taufiqhdyt
             _listEnemy = new List<EnemyModel>();
             _listBenteng = new List<BentengModel>();
             _actor = new ActorModel();
+            _peluruActor = new PeluruModel();
+
 
             CreateEnemyObject();
             CreateBentengObject();
             CreateActorObject();
+            CreatePeluruActorObject();
             DrawAll();
         }
         private void DrawAll()
@@ -40,6 +44,7 @@ namespace pkl_app_1_taufiqhdyt
             DrawEnemy();
             DrawBenteng();
             DrawActor();
+            DrawPeluru();
             SpaceBoard.Invalidate();
         }
 
@@ -48,10 +53,10 @@ namespace pkl_app_1_taufiqhdyt
             canvas = new Bitmap(SpaceBoard.Width, SpaceBoard.Height);
             using (var grafik = Graphics.FromImage(canvas))
             {
-                grafik.DrawImage(Properties.Resources.star_background_320x240px, 0, 0, canvas.Width, canvas.Height);
+                grafik.DrawImage(Properties.Resources.groundHighres, 0, 0, canvas.Width, canvas.Height);
                 for (int x = 0; x < SPACE_BOARD_WIDTH; x++)
                     for (int y = 0; y < SPACE_BOARD_HEIGHT; y++) ;
-                       // grafik.DrawRectangle(new Pen(Color.DarkGreen), x * SQUARE_SIZE, y * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
+                // grafik.DrawRectangle(new Pen(Color.DarkGreen), x * SQUARE_SIZE, y * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
             }
         }
         private void DrawEnemy()
@@ -69,8 +74,15 @@ namespace pkl_app_1_taufiqhdyt
                 grafik.DrawImage(_actor.Gambar, _actor.PosX * SQUARE_SIZE, _actor.PosY * SQUARE_SIZE, _actor.Width * SQUARE_SIZE, _actor.Height * SQUARE_SIZE);
             }
         }
+        private void DrawPeluru()
+        {
+            using (var grafik = Graphics.FromImage(canvas))
+            {
+                grafik.DrawImage(_peluruActor.Gambar, _peluruActor.PosX * SQUARE_SIZE, _peluruActor.PosY * SQUARE_SIZE, _peluruActor.Width * SQUARE_SIZE, _peluruActor.Height * SQUARE_SIZE);
+            }
+        }
 
-      
+
         private void MoveEnemy()
         {
             var modifierX = 0;
@@ -111,12 +123,14 @@ namespace pkl_app_1_taufiqhdyt
                     Brush brush = null;
                     switch (benteng.DefencePower)
                     {
-                       
+
                         default:
                             brush = new SolidBrush(Color.DarkSlateGray);
                             break;
                     };
-                    grafik.FillRectangle(brush, benteng.PosX * SQUARE_SIZE, benteng.PosY * SQUARE_SIZE, benteng.Width * SQUARE_SIZE, benteng.Height * SQUARE_SIZE);
+                     grafik.FillRectangle(brush, benteng.PosX * SQUARE_SIZE, benteng.PosY * SQUARE_SIZE, benteng.Width * SQUARE_SIZE, benteng.Height * SQUARE_SIZE);
+                    //grafik.DrawImage(Properties.Resources.bunker1, benteng.PosX * SQUARE_SIZE, benteng.PosY * SQUARE_SIZE, benteng.Width * SQUARE_SIZE, benteng.Height * SQUARE_SIZE);
+
 
                 }
             }
@@ -125,8 +139,8 @@ namespace pkl_app_1_taufiqhdyt
 
         private void CreateEnemyObject()
         {
-            const int WIDTH = 4;
-            const int HEIGHT = 4;
+            const int WIDTH = 2;
+            const int HEIGHT = 1;
 
             //  enemy level-3 (paling atas)
             for (var i = 1; i <= 9; i++)
@@ -196,9 +210,9 @@ namespace pkl_app_1_taufiqhdyt
         private void CreateBentengObject()
         {
             const int WIDTH = 7;
-            const int HEIGHT = 1;
+            const int HEIGHT = 2;
 
-            for (var i = 1; i <= 8; i++)
+            for (var i = 1; i <= 3; i++)
             {
                 var newBenteng = new BentengModel
                 {
@@ -206,8 +220,8 @@ namespace pkl_app_1_taufiqhdyt
                     DefencePower = 5,
                     Height = HEIGHT,
                     Width = WIDTH,
-                    PosX = (i * (WIDTH + 4)) - WIDTH,
-                    PosY = 32
+                    PosX = (i * (WIDTH + 15)) - WIDTH,
+                    PosY = 29
                 };
                 _listBenteng.Add(newBenteng);
             }
@@ -218,13 +232,30 @@ namespace pkl_app_1_taufiqhdyt
             _actor = new ActorModel
             {
                 Gambar = ActorPic.Image,
-                Width = 6,
-                Height = 4,
+                Width = 5,
+                Height = 3,
                 PosX = 0,
                 PosY = 36,
             };
         }
-      
+        private void CreatePeluruActorObject()
+        {
+            _peluruActor.IsAktif = false;
+            _peluruActor.Width = 1;
+            _peluruActor.Height = 3;
+            _peluruActor.Gambar = PeluruPic.Image;
+            
+        }
+        private void TembakMusuh()
+        {
+            if (_peluruActor.IsAktif)
+                return;
+            _peluruActor.PosX = _actor.PosX + (_actor.Width / 2);
+            _peluruActor.PosY = _actor.PosY - 3 ;
+            _peluruActor.IsAktif = true;
+        }
+
+
         private void SpaceBoard_Click(object sender, EventArgs e)
         {
 
@@ -253,7 +284,7 @@ namespace pkl_app_1_taufiqhdyt
             if (_actor.PosX <= 0)
                 _actor.PosX = 0;
             if (_actor.PosX > SPACE_BOARD_WIDTH - _actor.Width)
-                _actor.PosY = SPACE_BOARD_WIDTH - _actor.Width;
+                _actor.PosX = SPACE_BOARD_WIDTH - _actor.Width;
             DrawAll();
         }
 
@@ -273,6 +304,9 @@ namespace pkl_app_1_taufiqhdyt
                 case Keys.D:
                     _arahActor = "right";
                     break;
+                case Keys.Space:
+                    TembakMusuh();
+                    break;
             }
         }
 
@@ -289,6 +323,18 @@ namespace pkl_app_1_taufiqhdyt
         private void ActorPic_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void PeluruMove_Tick(object sender, EventArgs e)
+        {
+            if (!_peluruActor.IsAktif)
+                return;
+            _peluruActor.PosY--;
+            if (_peluruActor.PosY <= 0)
+            {
+                _peluruActor.IsAktif = false;
+                _peluruActor.PosY = -10;
+            }
         }
     }
 }
