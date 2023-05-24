@@ -139,8 +139,8 @@ namespace pkl_app_1_taufiqhdyt
 
         private void CreateEnemyObject()
         {
-            const int WIDTH = 2;
-            const int HEIGHT = 1;
+            const int WIDTH = 3;
+            const int HEIGHT = 2;
 
             //  enemy level-3 (paling atas)
             for (var i = 1; i <= 9; i++)
