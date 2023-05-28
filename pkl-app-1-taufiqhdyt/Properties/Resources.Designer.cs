@@ -103,6 +103,16 @@ namespace pkl_app_1_taufiqhdyt.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BackgroundSpaceInvaders {
+            get {
+                object obj = ResourceManager.GetObject("BackgroundSpaceInvaders", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap badan {
             get {
                 object obj = ResourceManager.GetObject("badan", resourceCulture);

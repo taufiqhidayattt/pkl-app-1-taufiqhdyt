@@ -53,17 +53,17 @@ namespace pkl_app_1_taufiqhdyt
             canvas = new Bitmap(SpaceBoard.Width, SpaceBoard.Height);
             using (var grafik = Graphics.FromImage(canvas))
             {
-                grafik.DrawImage(Properties.Resources.groundHighres, 0, 0, canvas.Width, canvas.Height);
+                 grafik.DrawImage(Properties.Resources.BackgroundSpaceInvaders, 0, 0, canvas.Width, canvas.Height);
                 for (int x = 0; x < SPACE_BOARD_WIDTH; x++)
                     for (int y = 0; y < SPACE_BOARD_HEIGHT; y++) ;
-                // grafik.DrawRectangle(new Pen(Color.DarkGreen), x * SQUARE_SIZE, y * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
+                       // grafik.DrawRectangle(new Pen(Color.DarkGreen), x * SQUARE_SIZE, y * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
             }
         }
         private void DrawEnemy()
         {
             using (var grafik = Graphics.FromImage(canvas))
             {
-                foreach (var enemy in _listEnemy)
+                foreach (var enemy in _listEnemy.Where(x => x.IsAlive).ToList())
                     grafik.DrawImage(enemy.Gambar, enemy.PosX * SQUARE_SIZE, enemy.PosY * SQUARE_SIZE, enemy.Width * SQUARE_SIZE, enemy.Height * SQUARE_SIZE);
             }
         }
@@ -128,7 +128,7 @@ namespace pkl_app_1_taufiqhdyt
                             brush = new SolidBrush(Color.DarkSlateGray);
                             break;
                     };
-                     grafik.FillRectangle(brush, benteng.PosX * SQUARE_SIZE, benteng.PosY * SQUARE_SIZE, benteng.Width * SQUARE_SIZE, benteng.Height * SQUARE_SIZE);
+                    grafik.FillRectangle(brush, benteng.PosX * SQUARE_SIZE, benteng.PosY * SQUARE_SIZE, benteng.Width * SQUARE_SIZE, benteng.Height * SQUARE_SIZE);
                     //grafik.DrawImage(Properties.Resources.bunker1, benteng.PosX * SQUARE_SIZE, benteng.PosY * SQUARE_SIZE, benteng.Width * SQUARE_SIZE, benteng.Height * SQUARE_SIZE);
 
 
@@ -244,14 +244,14 @@ namespace pkl_app_1_taufiqhdyt
             _peluruActor.Width = 1;
             _peluruActor.Height = 3;
             _peluruActor.Gambar = PeluruPic.Image;
-            
+
         }
         private void TembakMusuh()
         {
             if (_peluruActor.IsAktif)
                 return;
             _peluruActor.PosX = _actor.PosX + (_actor.Width / 2);
-            _peluruActor.PosY = _actor.PosY - 3 ;
+            _peluruActor.PosY = _actor.PosY - 3;
             _peluruActor.IsAktif = true;
         }
 
@@ -327,14 +327,41 @@ namespace pkl_app_1_taufiqhdyt
 
         private void PeluruMove_Tick(object sender, EventArgs e)
         {
+
             if (!_peluruActor.IsAktif)
                 return;
             _peluruActor.PosY--;
+
+            var enemyTertembak = GetEnemyTertembak();
+            if (enemyTertembak != null)
+            {
+                enemyTertembak.IsAlive = false;
+                _peluruActor.IsAktif = false;
+                _peluruActor.PosY = -10;
+            }
+
             if (_peluruActor.PosY <= 0)
             {
                 _peluruActor.IsAktif = false;
                 _peluruActor.PosY = -10;
             }
+        }
+        private EnemyModel GetEnemyTertembak()
+        {
+            foreach (var enemy in _listEnemy.Where(x => x.IsAlive).OrderByDescending(x => x.Id).ToList())
+            {
+                //  deteksi apakah kena bagian bawah enemy
+                //      - tidak kena
+                if (_peluruActor.PosY != enemy.PosY + enemy.Height)
+                    continue;
+                if (_peluruActor.PosX < enemy.PosX)
+                    continue;
+                if (_peluruActor.PosX > enemy.PosX + enemy.Width)
+                    continue;
+                //      - kena!!
+                return enemy;
+            }
+            return null;
         }
     }
 }

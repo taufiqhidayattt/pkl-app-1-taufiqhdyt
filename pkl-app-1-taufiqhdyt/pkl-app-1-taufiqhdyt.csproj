@@ -369,5 +369,8 @@
   <ItemGroup>
     <None Include="Resources\groundHighres.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackgroundSpaceInvaders1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
