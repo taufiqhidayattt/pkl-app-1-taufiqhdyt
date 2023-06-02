@@ -40,6 +40,8 @@ namespace pkl_app_1_taufiqhdyt
             this.Enemy2Pic = new System.Windows.Forms.PictureBox();
             this.Enemy1Pic = new System.Windows.Forms.PictureBox();
             this.SpaceBoard = new System.Windows.Forms.PictureBox();
+            this.Benteng = new System.Windows.Forms.PictureBox();
+            this.meledak = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PeluruPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Enemy4Pic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActorPic)).BeginInit();
@@ -47,6 +49,8 @@ namespace pkl_app_1_taufiqhdyt
             ((System.ComponentModel.ISupportInitialize)(this.Enemy2Pic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Enemy1Pic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpaceBoard)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Benteng)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.meledak)).BeginInit();
             this.SuspendLayout();
             // 
             // EnemyMoveTimer
@@ -140,11 +144,35 @@ namespace pkl_app_1_taufiqhdyt
             this.SpaceBoard.Click += new System.EventHandler(this.SpaceBoard_Click);
             this.SpaceBoard.Paint += new System.Windows.Forms.PaintEventHandler(this.SpaceBoard_Paint_1);
             // 
+            // Benteng
+            // 
+            this.Benteng.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.bunker1;
+            this.Benteng.Location = new System.Drawing.Point(271, 412);
+            this.Benteng.Name = "Benteng";
+            this.Benteng.Size = new System.Drawing.Size(36, 32);
+            this.Benteng.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Benteng.TabIndex = 12;
+            this.Benteng.TabStop = false;
+            this.Benteng.Visible = false;
+            // 
+            // meledak
+            // 
+            this.meledak.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.meledak;
+            this.meledak.Location = new System.Drawing.Point(313, 412);
+            this.meledak.Name = "meledak";
+            this.meledak.Size = new System.Drawing.Size(36, 32);
+            this.meledak.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.meledak.TabIndex = 13;
+            this.meledak.TabStop = false;
+            this.meledak.Visible = false;
+            // 
             // SpaceInvaders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(801, 433);
+            this.Controls.Add(this.meledak);
+            this.Controls.Add(this.Benteng);
             this.Controls.Add(this.PeluruPic);
             this.Controls.Add(this.Enemy4Pic);
             this.Controls.Add(this.ActorPic);
@@ -164,6 +192,8 @@ namespace pkl_app_1_taufiqhdyt
             ((System.ComponentModel.ISupportInitialize)(this.Enemy2Pic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Enemy1Pic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpaceBoard)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Benteng)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.meledak)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -180,5 +210,7 @@ namespace pkl_app_1_taufiqhdyt
         private System.Windows.Forms.PictureBox Enemy4Pic;
         private System.Windows.Forms.PictureBox PeluruPic;
         private System.Windows.Forms.Timer PeluruMove;
+        private System.Windows.Forms.PictureBox Benteng;
+        private System.Windows.Forms.PictureBox meledak;
     }
 }

@@ -63,8 +63,17 @@ namespace pkl_app_1_taufiqhdyt
         {
             using (var grafik = Graphics.FromImage(canvas))
             {
-                foreach (var enemy in _listEnemy.Where(x => x.IsAlive).ToList())
-                    grafik.DrawImage(enemy.Gambar, enemy.PosX * SQUARE_SIZE, enemy.PosY * SQUARE_SIZE, enemy.Width * SQUARE_SIZE, enemy.Height * SQUARE_SIZE);
+                foreach (var enemy in _listEnemy.Where(x => x.IsAlive != 2).ToList())
+                {
+                    if (enemy.IsAlive == 0)
+                        grafik.DrawImage(enemy.Gambar, enemy.PosX * SQUARE_SIZE, enemy.PosY * SQUARE_SIZE, enemy.Width * SQUARE_SIZE, enemy.Height * SQUARE_SIZE);
+                    else
+                    {
+                        grafik.DrawImage(meledak.Image, enemy.PosX * SQUARE_SIZE, enemy.PosY * SQUARE_SIZE, enemy.Width * SQUARE_SIZE, enemy.Height * SQUARE_SIZE);
+                        enemy.IsAlive = 2;
+                    }
+
+                }
             }
         }
         private void DrawActor()
@@ -149,7 +158,7 @@ namespace pkl_app_1_taufiqhdyt
                 {
                     Id = i,
                     Gambar = Enemy4Pic.Image,
-                    IsAlive = true,
+                    IsAlive = 0,
                     Width = WIDTH,
                     Height = HEIGHT,
                     PosX = (i * WIDTH * 2) - WIDTH,
@@ -165,7 +174,7 @@ namespace pkl_app_1_taufiqhdyt
                 {
                     Id = i,
                     Gambar = Enemy1Pic.Image,
-                    IsAlive = true,
+                    IsAlive = 0,
                     Width = WIDTH,
                     Height = HEIGHT,
                     PosX = ((i - 9) * WIDTH * 2) - WIDTH,
@@ -181,7 +190,7 @@ namespace pkl_app_1_taufiqhdyt
                 {
                     Id = i,
                     Gambar = Enemy2Pic.Image,
-                    IsAlive = true,
+                    IsAlive = 0,
                     Width = WIDTH,
                     Height = HEIGHT,
                     PosX = ((i - 18) * WIDTH * 2) - WIDTH,
@@ -197,7 +206,7 @@ namespace pkl_app_1_taufiqhdyt
                 {
                     Id = i,
                     Gambar = Enemy3Pic.Image,
-                    IsAlive = true,
+                    IsAlive = 0,
                     Width = WIDTH,
                     Height = HEIGHT,
                     PosX = ((i - 27) * WIDTH * 2) - WIDTH,
@@ -332,14 +341,24 @@ namespace pkl_app_1_taufiqhdyt
                 return;
             _peluruActor.PosY--;
 
-            var enemyTertembak = GetEnemyTertembak();
-            if (enemyTertembak != null)
+            //  apakah peluru kena benteng?
+            var bentengTertembak = GetBentengTertembak();
+            if (bentengTertembak != null)
             {
-                enemyTertembak.IsAlive = false;
                 _peluruActor.IsAktif = false;
                 _peluruActor.PosY = -10;
             }
 
+            //  apakah peluru kena enemy?
+            var enemyTertembak = GetEnemyTertembak();
+            if (enemyTertembak != null)
+            {
+                enemyTertembak.IsAlive = 1;
+                _peluruActor.IsAktif = false;
+                _peluruActor.PosY = -10;
+            }
+
+            //  apakah peluru kena udah lewat batas atas
             if (_peluruActor.PosY <= 0)
             {
                 _peluruActor.IsAktif = false;
@@ -348,7 +367,7 @@ namespace pkl_app_1_taufiqhdyt
         }
         private EnemyModel GetEnemyTertembak()
         {
-            foreach (var enemy in _listEnemy.Where(x => x.IsAlive).OrderByDescending(x => x.Id).ToList())
+            foreach (var enemy in _listEnemy.Where(x => x.IsAlive == 0).OrderByDescending(x => x.Id).ToList())
             {
                 //  deteksi apakah kena bagian bawah enemy
                 //      - tidak kena
@@ -360,6 +379,20 @@ namespace pkl_app_1_taufiqhdyt
                     continue;
                 //      - kena!!
                 return enemy;
+            }
+            return null;
+        }
+        private BentengModel GetBentengTertembak()
+        {
+            foreach (var benteng in _listBenteng)
+            {
+                if (_peluruActor.PosY > benteng.PosY + 1 + benteng.Height)
+                    continue;
+                if (_peluruActor.PosX < benteng.PosX)
+                    continue;
+                if (_peluruActor.PosX > benteng.PosX + benteng.Width)
+                    continue;
+                return benteng;
             }
             return null;
         }
