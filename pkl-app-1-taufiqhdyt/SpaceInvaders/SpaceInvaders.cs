@@ -53,10 +53,10 @@ namespace pkl_app_1_taufiqhdyt
             canvas = new Bitmap(SpaceBoard.Width, SpaceBoard.Height);
             using (var grafik = Graphics.FromImage(canvas))
             {
-                 grafik.DrawImage(Properties.Resources.BackgroundSpaceInvaders, 0, 0, canvas.Width, canvas.Height);
+                 //grafik.DrawImage(Properties.Resources.BackgroundSpaceInvaders, 0, 0, canvas.Width, canvas.Height);
                 for (int x = 0; x < SPACE_BOARD_WIDTH; x++)
-                    for (int y = 0; y < SPACE_BOARD_HEIGHT; y++) ;
-                       // grafik.DrawRectangle(new Pen(Color.DarkGreen), x * SQUARE_SIZE, y * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
+                    for (int y = 0; y < SPACE_BOARD_HEIGHT; y++) 
+                       grafik.DrawRectangle(new Pen(Color.DarkGreen), x * SQUARE_SIZE, y * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
             }
         }
         private void DrawEnemy()
@@ -137,8 +137,8 @@ namespace pkl_app_1_taufiqhdyt
                             brush = new SolidBrush(Color.DarkSlateGray);
                             break;
                     };
-                    grafik.FillRectangle(brush, benteng.PosX * SQUARE_SIZE, benteng.PosY * SQUARE_SIZE, benteng.Width * SQUARE_SIZE, benteng.Height * SQUARE_SIZE);
-                    //grafik.DrawImage(Properties.Resources.bunker1, benteng.PosX * SQUARE_SIZE, benteng.PosY * SQUARE_SIZE, benteng.Width * SQUARE_SIZE, benteng.Height * SQUARE_SIZE);
+                    //grafik.FillRectangle(brush, benteng.PosX * SQUARE_SIZE, benteng.PosY * SQUARE_SIZE, benteng.Width * SQUARE_SIZE, benteng.Height * SQUARE_SIZE);
+                    grafik.DrawImage(Benteng.Image, benteng.PosX * SQUARE_SIZE, benteng.PosY * SQUARE_SIZE, benteng.Width * SQUARE_SIZE, benteng.Height * SQUARE_SIZE);
 
 
                 }
@@ -230,7 +230,7 @@ namespace pkl_app_1_taufiqhdyt
                     Height = HEIGHT,
                     Width = WIDTH,
                     PosX = (i * (WIDTH + 15)) - WIDTH,
-                    PosY = 29
+                    PosY = 26
                 };
                 _listBenteng.Add(newBenteng);
             }
@@ -386,7 +386,7 @@ namespace pkl_app_1_taufiqhdyt
         {
             foreach (var benteng in _listBenteng)
             {
-                if (_peluruActor.PosY > benteng.PosY + 1 + benteng.Height)
+                if (_peluruActor.PosY > benteng.PosY - 1 + benteng.Height)
                     continue;
                 if (_peluruActor.PosX < benteng.PosX)
                     continue;
