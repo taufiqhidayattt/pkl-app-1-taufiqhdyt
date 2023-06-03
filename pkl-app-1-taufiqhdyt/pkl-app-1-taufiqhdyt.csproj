@@ -375,5 +375,20 @@
   <ItemGroup>
     <None Include="Resources\meledak.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\playerTank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enemy1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enemy2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enemy3.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -163,6 +163,16 @@ namespace pkl_app_1_taufiqhdyt.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Bos {
+            get {
+                object obj = ResourceManager.GetObject("Bos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bullet {
             get {
                 object obj = ResourceManager.GetObject("bullet", resourceCulture);
@@ -216,6 +226,36 @@ namespace pkl_app_1_taufiqhdyt.Properties {
         internal static System.Drawing.Bitmap Empty {
             get {
                 object obj = ResourceManager.GetObject("Empty", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap enemy1 {
+            get {
+                object obj = ResourceManager.GetObject("enemy1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap enemy2 {
+            get {
+                object obj = ResourceManager.GetObject("enemy2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap enemy3 {
+            get {
+                object obj = ResourceManager.GetObject("enemy3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -446,6 +486,16 @@ namespace pkl_app_1_taufiqhdyt.Properties {
         internal static System.Drawing.Bitmap playerBullet {
             get {
                 object obj = ResourceManager.GetObject("playerBullet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap playerTank {
+            get {
+                object obj = ResourceManager.GetObject("playerTank", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

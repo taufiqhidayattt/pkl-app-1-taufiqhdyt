@@ -53,10 +53,10 @@ namespace pkl_app_1_taufiqhdyt
             canvas = new Bitmap(SpaceBoard.Width, SpaceBoard.Height);
             using (var grafik = Graphics.FromImage(canvas))
             {
-                 //grafik.DrawImage(Properties.Resources.BackgroundSpaceInvaders, 0, 0, canvas.Width, canvas.Height);
+                grafik.DrawImage(Latar.Image ,0, 0, canvas.Width, canvas.Height);
                 for (int x = 0; x < SPACE_BOARD_WIDTH; x++)
-                    for (int y = 0; y < SPACE_BOARD_HEIGHT; y++) 
-                       grafik.DrawRectangle(new Pen(Color.DarkGreen), x * SQUARE_SIZE, y * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
+                    for (int y = 0; y < SPACE_BOARD_HEIGHT; y++) ;
+                      // grafik.DrawRectangle(new Pen(Color.DarkGreen), x * SQUARE_SIZE, y * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
             }
         }
         private void DrawEnemy()
@@ -134,11 +134,11 @@ namespace pkl_app_1_taufiqhdyt
                     {
 
                         default:
-                            brush = new SolidBrush(Color.DarkSlateGray);
+                            brush = new SolidBrush(Color.Gainsboro);
                             break;
                     };
-                    //grafik.FillRectangle(brush, benteng.PosX * SQUARE_SIZE, benteng.PosY * SQUARE_SIZE, benteng.Width * SQUARE_SIZE, benteng.Height * SQUARE_SIZE);
-                    grafik.DrawImage(Benteng.Image, benteng.PosX * SQUARE_SIZE, benteng.PosY * SQUARE_SIZE, benteng.Width * SQUARE_SIZE, benteng.Height * SQUARE_SIZE);
+                    grafik.FillRectangle(brush, benteng.PosX * SQUARE_SIZE, benteng.PosY * SQUARE_SIZE, benteng.Width * SQUARE_SIZE, benteng.Height * SQUARE_SIZE);
+                   // grafik.DrawImage(Benteng.Image, benteng.PosX * SQUARE_SIZE, benteng.PosY * SQUARE_SIZE, benteng.Width * SQUARE_SIZE, benteng.Height * SQUARE_SIZE);
 
 
                 }
@@ -157,7 +157,7 @@ namespace pkl_app_1_taufiqhdyt
                 var newEnemy = new EnemyModel
                 {
                     Id = i,
-                    Gambar = Enemy4Pic.Image,
+                    Gambar = BosPic.Image,
                     IsAlive = 0,
                     Width = WIDTH,
                     Height = HEIGHT,
@@ -173,7 +173,7 @@ namespace pkl_app_1_taufiqhdyt
                 var newEnemy = new EnemyModel
                 {
                     Id = i,
-                    Gambar = Enemy1Pic.Image,
+                    Gambar = Enemy3Pic.Image,
                     IsAlive = 0,
                     Width = WIDTH,
                     Height = HEIGHT,
@@ -205,7 +205,7 @@ namespace pkl_app_1_taufiqhdyt
                 var newEnemy = new EnemyModel
                 {
                     Id = i,
-                    Gambar = Enemy3Pic.Image,
+                    Gambar = Enemy1Pic.Image,
                     IsAlive = 0,
                     Width = WIDTH,
                     Height = HEIGHT,
@@ -219,7 +219,7 @@ namespace pkl_app_1_taufiqhdyt
         private void CreateBentengObject()
         {
             const int WIDTH = 7;
-            const int HEIGHT = 2;
+            const int HEIGHT = 3;
 
             for (var i = 1; i <= 3; i++)
             {
@@ -230,7 +230,7 @@ namespace pkl_app_1_taufiqhdyt
                     Height = HEIGHT,
                     Width = WIDTH,
                     PosX = (i * (WIDTH + 15)) - WIDTH,
-                    PosY = 26
+                    PosY = 27
                 };
                 _listBenteng.Add(newBenteng);
             }
@@ -244,7 +244,7 @@ namespace pkl_app_1_taufiqhdyt
                 Width = 5,
                 Height = 3,
                 PosX = 0,
-                PosY = 36,
+                PosY = 37,
             };
         }
         private void CreatePeluruActorObject()
@@ -395,6 +395,11 @@ namespace pkl_app_1_taufiqhdyt
                 return benteng;
             }
             return null;
+        }
+
+        private void Enemy2Pic_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
