@@ -390,5 +390,14 @@
   <ItemGroup>
     <None Include="Resources\enemy3.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enemyBullet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bolaapi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boomenemy.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

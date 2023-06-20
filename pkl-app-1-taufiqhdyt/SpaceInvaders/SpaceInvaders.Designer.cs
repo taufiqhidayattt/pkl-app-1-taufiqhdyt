@@ -33,6 +33,9 @@ namespace pkl_app_1_taufiqhdyt
             this.EnemyMoveTimer = new System.Windows.Forms.Timer(this.components);
             this.ActorMoveTimer = new System.Windows.Forms.Timer(this.components);
             this.PeluruMove = new System.Windows.Forms.Timer(this.components);
+            this.PeluruEnemyMoveTimer = new System.Windows.Forms.Timer(this.components);
+            this.PeluruEnemyTembakTimer = new System.Windows.Forms.Timer(this.components);
+            this.EnemyBullet = new System.Windows.Forms.PictureBox();
             this.Latar = new System.Windows.Forms.PictureBox();
             this.meledak = new System.Windows.Forms.PictureBox();
             this.Benteng = new System.Windows.Forms.PictureBox();
@@ -43,6 +46,7 @@ namespace pkl_app_1_taufiqhdyt
             this.Enemy2Pic = new System.Windows.Forms.PictureBox();
             this.Enemy3Pic = new System.Windows.Forms.PictureBox();
             this.SpaceBoard = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.EnemyBullet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Latar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.meledak)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Benteng)).BeginInit();
@@ -73,6 +77,29 @@ namespace pkl_app_1_taufiqhdyt
             this.PeluruMove.Interval = 1;
             this.PeluruMove.Tick += new System.EventHandler(this.PeluruMove_Tick);
             // 
+            // PeluruEnemyMoveTimer
+            // 
+            this.PeluruEnemyMoveTimer.Enabled = true;
+            this.PeluruEnemyMoveTimer.Interval = 150;
+            this.PeluruEnemyMoveTimer.Tick += new System.EventHandler(this.PeluruEnemyMoveTimer_Tick);
+            // 
+            // PeluruEnemyTembakTimer
+            // 
+            this.PeluruEnemyTembakTimer.Enabled = true;
+            this.PeluruEnemyTembakTimer.Interval = 4000;
+            this.PeluruEnemyTembakTimer.Tick += new System.EventHandler(this.PeluruEnemyTembakTimer_Tick);
+            // 
+            // EnemyBullet
+            // 
+            this.EnemyBullet.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.bolaapi;
+            this.EnemyBullet.Location = new System.Drawing.Point(397, 412);
+            this.EnemyBullet.Name = "EnemyBullet";
+            this.EnemyBullet.Size = new System.Drawing.Size(36, 32);
+            this.EnemyBullet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.EnemyBullet.TabIndex = 15;
+            this.EnemyBullet.TabStop = false;
+            this.EnemyBullet.Visible = false;
+            // 
             // Latar
             // 
             this.Latar.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.BackgroundSpaceInvaders;
@@ -86,7 +113,7 @@ namespace pkl_app_1_taufiqhdyt
             // 
             // meledak
             // 
-            this.meledak.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.meledak;
+            this.meledak.Image = global::pkl_app_1_taufiqhdyt.Properties.Resources.Boomenemy;
             this.meledak.Location = new System.Drawing.Point(313, 412);
             this.meledak.Name = "meledak";
             this.meledak.Size = new System.Drawing.Size(36, 32);
@@ -184,6 +211,7 @@ namespace pkl_app_1_taufiqhdyt
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(801, 433);
+            this.Controls.Add(this.EnemyBullet);
             this.Controls.Add(this.Latar);
             this.Controls.Add(this.meledak);
             this.Controls.Add(this.Benteng);
@@ -199,6 +227,7 @@ namespace pkl_app_1_taufiqhdyt
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SpaceInvaders_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.SpaceInvaders_KeyUp);
             this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.SpaceInvaders_PreviewKeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.EnemyBullet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Latar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.meledak)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Benteng)).EndInit();
@@ -228,5 +257,8 @@ namespace pkl_app_1_taufiqhdyt
         private System.Windows.Forms.PictureBox Benteng;
         private System.Windows.Forms.PictureBox meledak;
         private System.Windows.Forms.PictureBox Latar;
+        private System.Windows.Forms.Timer PeluruEnemyMoveTimer;
+        private System.Windows.Forms.Timer PeluruEnemyTembakTimer;
+        private System.Windows.Forms.PictureBox EnemyBullet;
     }
 }

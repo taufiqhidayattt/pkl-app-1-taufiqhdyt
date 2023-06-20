@@ -163,6 +163,26 @@ namespace pkl_app_1_taufiqhdyt.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bolaapi {
+            get {
+                object obj = ResourceManager.GetObject("bolaapi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Boomenemy {
+            get {
+                object obj = ResourceManager.GetObject("Boomenemy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Bos {
             get {
                 object obj = ResourceManager.GetObject("Bos", resourceCulture);
@@ -256,6 +276,16 @@ namespace pkl_app_1_taufiqhdyt.Properties {
         internal static System.Drawing.Bitmap enemy3 {
             get {
                 object obj = ResourceManager.GetObject("enemy3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap enemyBullet {
+            get {
+                object obj = ResourceManager.GetObject("enemyBullet", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
