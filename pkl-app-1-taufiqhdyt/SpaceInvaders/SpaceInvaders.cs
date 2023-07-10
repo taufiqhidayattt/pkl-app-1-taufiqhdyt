@@ -61,10 +61,9 @@ namespace pkl_app_1_taufiqhdyt
             canvas = new Bitmap(SpaceBoard.Width, SpaceBoard.Height);
             using (var grafik = Graphics.FromImage(canvas))
             {
-                grafik.DrawImage(Latar.Image ,0, 0, canvas.Width, canvas.Height);
                 for (int x = 0; x < SPACE_BOARD_WIDTH; x++)
-                    for (int y = 0; y < SPACE_BOARD_HEIGHT; y++) ;
-                      // grafik.DrawRectangle(new Pen(Color.DarkGreen), x * SQUARE_SIZE, y * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
+                    for (int y = 0; y < SPACE_BOARD_HEIGHT; y++)
+                        grafik.DrawRectangle(new Pen(Color.DarkSlateGray), x * SQUARE_SIZE, y * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
             }
         }
         private void DrawEnemy()
@@ -107,6 +106,39 @@ namespace pkl_app_1_taufiqhdyt
             }
         }
 
+        private void DrawBenteng()
+        {
+            using (var grafik = Graphics.FromImage(canvas))
+            {
+                foreach (var benteng in _listBenteng)
+                {
+                    Brush brush = null;
+                    switch (benteng.DefencePower)
+                    {
+                        case 5:
+                            brush = new SolidBrush(Color.Aquamarine);
+                            break;
+                        case 4:
+                            brush = new SolidBrush(Color.Turquoise);
+                            break;
+                        case 3:
+                            brush = new SolidBrush(Color.LightSeaGreen);
+                            break;
+                        case 2:
+                            brush = new SolidBrush(Color.Teal);
+                            break;
+                        case 1:
+                            brush = new SolidBrush(Color.FromArgb(0, 40, 40));
+                            break;
+                        default:
+                            brush = new SolidBrush(Color.DarkSlateGray);
+                            break;
+                    };
+                    grafik.FillRectangle(brush, benteng.PosX * SQUARE_SIZE, benteng.PosY * SQUARE_SIZE, benteng.Width * SQUARE_SIZE, benteng.Height * SQUARE_SIZE);
+
+                }
+            }
+        }
 
 
         private void MoveEnemy()
@@ -140,27 +172,7 @@ namespace pkl_app_1_taufiqhdyt
         }
 
 
-        private void DrawBenteng()
-        {
-            using (var grafik = Graphics.FromImage(canvas))
-            {
-                foreach (var benteng in _listBenteng)
-                {
-                    Brush brush = null;
-                    switch (benteng.DefencePower)
-                    {
-
-                        default:
-                            brush = new SolidBrush(Color.Gainsboro);
-                            break;
-                    };
-                    grafik.FillRectangle(brush, benteng.PosX * SQUARE_SIZE, benteng.PosY * SQUARE_SIZE, benteng.Width * SQUARE_SIZE, benteng.Height * SQUARE_SIZE);
-                   // grafik.DrawImage(Benteng.Image, benteng.PosX * SQUARE_SIZE, benteng.PosY * SQUARE_SIZE, benteng.Width * SQUARE_SIZE, benteng.Height * SQUARE_SIZE);
-
-
-                }
-            }
-        }
+      
 
 
         private void CreateEnemyObject()
@@ -235,10 +247,10 @@ namespace pkl_app_1_taufiqhdyt
 
         private void CreateBentengObject()
         {
-            const int WIDTH = 7;
-            const int HEIGHT = 3;
+            const int WIDTH = 6;
+            const int HEIGHT = 1;
 
-            for (var i = 1; i <= 3; i++)
+            for (var i = 1; i <= 8; i++)
             {
                 var newBenteng = new BentengModel
                 {
@@ -246,8 +258,8 @@ namespace pkl_app_1_taufiqhdyt
                     DefencePower = 5,
                     Height = HEIGHT,
                     Width = WIDTH,
-                    PosX = (i * (WIDTH + 15)) - WIDTH,
-                    PosY = 27
+                    PosX = (i * (WIDTH + 12)) - WIDTH,
+                    PosY = 30
                 };
                 _listBenteng.Add(newBenteng);
             }
@@ -304,8 +316,8 @@ namespace pkl_app_1_taufiqhdyt
 
         private void EnemyMoveTimer_Tick_1(object sender, EventArgs e)
         {
-            var palingLeft = _listEnemy.Min(x => x.PosX);
-            var palingRight = _listEnemy.Max(x => x.PosX + x.Width);
+            var palingLeft = _listEnemy.Where(x => x.IsAlive == 0).Min(x => x.PosX);
+            var palingRight = _listEnemy.Where(x => x.IsAlive == 0).Max(x => x.PosX + x.Width);
 
             if ((_arahEnemy == "left") && (palingLeft <= 0))
                 _arahEnemy = "right";
@@ -424,6 +436,29 @@ namespace pkl_app_1_taufiqhdyt
                     continue;
                 if (_peluruActor.PosX > benteng.PosX + benteng.Width)
                     continue;
+                if (benteng.DefencePower <= 0)
+                    continue;
+                return benteng;
+            }
+            return null;
+        }
+        private BentengModel GetBentengTertembakEnemy(PeluruModel peluru)
+        {
+            if (!peluru.IsAktif) return null;
+
+            foreach (var benteng in _listBenteng)
+            {
+                if (benteng.DefencePower <= 0)
+                    continue;
+
+                if (peluru.PosY < benteng.PosY)
+                    continue;
+                if (peluru.PosY > benteng.PosY + benteng.Height - 1)
+                    continue;
+                if (peluru.PosX < benteng.PosX)
+                    continue;
+                if (peluru.PosX > benteng.PosX + benteng.Width - 1)
+                    continue;
                 return benteng;
             }
             return null;
@@ -447,6 +482,15 @@ namespace pkl_app_1_taufiqhdyt
                     item.IsAktif = false;
                     item.PosY = -10;
                 }
+
+                var benteng = GetBentengTertembakEnemy(item);
+                if (benteng != null)
+
+                {
+                    benteng.DefencePower--;
+                    item.IsAktif = false;
+                    item.PosY = -10;
+                }
             }
         }
 
@@ -466,9 +510,9 @@ namespace pkl_app_1_taufiqhdyt
         private List<EnemyModel> ListEnemyBawah()
         {
             var listPosX = _listEnemy
-                .Where(x => x.IsAlive == 0)
-                .Select(x => x.PosX)
-                .Distinct().ToList();
+                 .Where(x => x.IsAlive == 0)
+                 .Select(x => x.PosX)
+                 .Distinct().ToList();
             var listEnemyBawah = new List<EnemyModel>();
             foreach (var item in listPosX)
             {

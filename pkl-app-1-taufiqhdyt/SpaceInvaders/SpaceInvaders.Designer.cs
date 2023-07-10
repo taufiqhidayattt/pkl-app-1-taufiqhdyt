@@ -197,7 +197,7 @@ namespace pkl_app_1_taufiqhdyt
             // 
             // SpaceBoard
             // 
-            this.SpaceBoard.BackColor = System.Drawing.Color.Black;
+            this.SpaceBoard.BackColor = System.Drawing.Color.DarkSlateGray;
             this.SpaceBoard.Location = new System.Drawing.Point(0, 6);
             this.SpaceBoard.Name = "SpaceBoard";
             this.SpaceBoard.Size = new System.Drawing.Size(800, 400);
