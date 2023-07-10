@@ -63,7 +63,7 @@ namespace pkl_app_1_taufiqhdyt
             {
                 for (int x = 0; x < SPACE_BOARD_WIDTH; x++)
                     for (int y = 0; y < SPACE_BOARD_HEIGHT; y++)
-                        grafik.DrawRectangle(new Pen(Color.DarkSlateGray), x * SQUARE_SIZE, y * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
+                        grafik.DrawRectangle(new Pen(Color.Black), x * SQUARE_SIZE, y * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
             }
         }
         private void DrawEnemy()
@@ -128,16 +128,45 @@ namespace pkl_app_1_taufiqhdyt
                             brush = new SolidBrush(Color.Teal);
                             break;
                         case 1:
-                            brush = new SolidBrush(Color.FromArgb(0, 40, 40));
+                            brush = new SolidBrush(Color.DarkSlateGray);
                             break;
                         default:
-                            brush = new SolidBrush(Color.DarkSlateGray);
+                            brush = new SolidBrush(Color.Black);
                             break;
                     };
                     grafik.FillRectangle(brush, benteng.PosX * SQUARE_SIZE, benteng.PosY * SQUARE_SIZE, benteng.Width * SQUARE_SIZE, benteng.Height * SQUARE_SIZE);
 
                 }
             }
+        }
+        private void DrawGameOver()
+        {
+            using (var grafik = Graphics.FromImage(canvas))
+            {
+                var margin = 10;
+
+                Font font = new Font("Arial", 34, FontStyle.Bold);
+                string text = "GAME OVER!";
+                SizeF size = grafik.MeasureString(text, font);
+                size.Width += margin * 2;
+                size.Height += margin * 2;
+
+                var posXText = (SpaceBoard.Width / 2) - (size.Width / 2);
+                var posYText = 150;
+
+
+                Rectangle rect = new Rectangle((int)posXText, posYText, (int)size.Width, (int)size.Height);
+                var fillBrush = new SolidBrush(Color.DarkRed);
+
+                grafik.FillRectangle(fillBrush, rect);
+                var line = new Pen(Color.Red);
+                grafik.DrawRectangle(line, rect);
+
+                Brush brush = Brushes.Azure;
+                PointF position = new PointF(posXText + margin, posYText + margin);
+                grafik.DrawString(text, font, brush, position);
+            }
+            SpaceBoard.Invalidate();
         }
 
 
@@ -255,7 +284,7 @@ namespace pkl_app_1_taufiqhdyt
                 var newBenteng = new BentengModel
                 {
                     Id = i,
-                    DefencePower = 5,
+                    DefencePower = 3,
                     Height = HEIGHT,
                     Width = WIDTH,
                     PosX = (i * (WIDTH + 12)) - WIDTH,
@@ -491,7 +520,39 @@ namespace pkl_app_1_taufiqhdyt
                     item.IsAktif = false;
                     item.PosY = -10;
                 }
+                if (PeluruEnemyKenaActor(item))
+                {
+                    StopAllTimer();
+                    DrawGameOver();
+                }
+
+
             }
+        }
+
+        private bool PeluruEnemyKenaActor(PeluruModel peluru)
+        {
+            if (!peluru.IsAktif)
+                return false;
+            if (peluru.PosY < _actor.PosY)
+                return false;
+            if (peluru.PosY > _actor.PosY + _actor.Height - 1)
+                return false;
+            if (peluru.PosX < _actor.PosX)
+                return false;
+            if (peluru.PosX > _actor.PosX + _actor.Width - 1)
+                return false;
+
+            return true;
+        }
+
+        private void StopAllTimer()
+        {
+            EnemyMoveTimer.Stop();
+            ActorMoveTimer.Stop();
+            PeluruActorTimer.Stop();
+            PeluruEnemyMoveTimer.Stop();
+            PeluruEnemyTembakTimer.Stop();
         }
 
         private void PeluruEnemyTembakTimer_Tick(object sender, EventArgs e)

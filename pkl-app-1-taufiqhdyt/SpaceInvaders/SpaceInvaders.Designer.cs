@@ -32,7 +32,7 @@ namespace pkl_app_1_taufiqhdyt
             this.components = new System.ComponentModel.Container();
             this.EnemyMoveTimer = new System.Windows.Forms.Timer(this.components);
             this.ActorMoveTimer = new System.Windows.Forms.Timer(this.components);
-            this.PeluruMove = new System.Windows.Forms.Timer(this.components);
+            this.PeluruActorTimer = new System.Windows.Forms.Timer(this.components);
             this.PeluruEnemyMoveTimer = new System.Windows.Forms.Timer(this.components);
             this.PeluruEnemyTembakTimer = new System.Windows.Forms.Timer(this.components);
             this.EnemyBullet = new System.Windows.Forms.PictureBox();
@@ -71,22 +71,21 @@ namespace pkl_app_1_taufiqhdyt
             this.ActorMoveTimer.Interval = 50;
             this.ActorMoveTimer.Tick += new System.EventHandler(this.ActorMoveTimer_Tick_1);
             // 
-            // PeluruMove
+            // PeluruActorTimer
             // 
-            this.PeluruMove.Enabled = true;
-            this.PeluruMove.Interval = 1;
-            this.PeluruMove.Tick += new System.EventHandler(this.PeluruMove_Tick);
+            this.PeluruActorTimer.Enabled = true;
+            this.PeluruActorTimer.Interval = 1;
+            this.PeluruActorTimer.Tick += new System.EventHandler(this.PeluruMove_Tick);
             // 
             // PeluruEnemyMoveTimer
             // 
             this.PeluruEnemyMoveTimer.Enabled = true;
-            this.PeluruEnemyMoveTimer.Interval = 150;
             this.PeluruEnemyMoveTimer.Tick += new System.EventHandler(this.PeluruEnemyMoveTimer_Tick);
             // 
             // PeluruEnemyTembakTimer
             // 
             this.PeluruEnemyTembakTimer.Enabled = true;
-            this.PeluruEnemyTembakTimer.Interval = 4000;
+            this.PeluruEnemyTembakTimer.Interval = 3500;
             this.PeluruEnemyTembakTimer.Tick += new System.EventHandler(this.PeluruEnemyTembakTimer_Tick);
             // 
             // EnemyBullet
@@ -197,7 +196,7 @@ namespace pkl_app_1_taufiqhdyt
             // 
             // SpaceBoard
             // 
-            this.SpaceBoard.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.SpaceBoard.BackColor = System.Drawing.Color.Black;
             this.SpaceBoard.Location = new System.Drawing.Point(0, 6);
             this.SpaceBoard.Name = "SpaceBoard";
             this.SpaceBoard.Size = new System.Drawing.Size(800, 400);
@@ -253,7 +252,7 @@ namespace pkl_app_1_taufiqhdyt
         private System.Windows.Forms.Timer ActorMoveTimer;
         private System.Windows.Forms.PictureBox BosPic;
         private System.Windows.Forms.PictureBox PeluruPic;
-        private System.Windows.Forms.Timer PeluruMove;
+        private System.Windows.Forms.Timer PeluruActorTimer;
         private System.Windows.Forms.PictureBox Benteng;
         private System.Windows.Forms.PictureBox meledak;
         private System.Windows.Forms.PictureBox Latar;
