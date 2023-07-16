@@ -24,7 +24,10 @@ namespace pkl_app_1_taufiqhdyt
         private string _arahActor = "";
         private PeluruModel _peluruActor;
         private List<PeluruModel> _listPeluruEnemy;
-
+        int _liveActor ;
+        private int _score = 0;
+        private bool _isGameOver = false;
+            
         public SpaceInvaders()
         {
 
@@ -52,6 +55,8 @@ namespace pkl_app_1_taufiqhdyt
             DrawActor();
             DrawPeluru();
             DrawPeluruEnemy();
+            DrawScore();
+
 
             SpaceBoard.Invalidate();
         }
@@ -145,7 +150,7 @@ namespace pkl_app_1_taufiqhdyt
             {
                 var margin = 10;
 
-                Font font = new Font("Arial", 34, FontStyle.Bold);
+                Font font = new Font("OCR A Extended", 34, FontStyle.Bold);
                 string text = "GAME OVER!";
                 SizeF size = grafik.MeasureString(text, font);
                 size.Width += margin * 2;
@@ -168,6 +173,43 @@ namespace pkl_app_1_taufiqhdyt
             }
             SpaceBoard.Invalidate();
         }
+
+        private void DrawScore()
+        {
+            if (_isGameOver)
+                return;
+
+            using (var grafik = Graphics.FromImage(canvas))
+            {
+                var margin = 5;
+
+                Font font = new Font("OCR A Extended", 13, FontStyle.Bold);
+                string text = $"Score: {_score}";
+                SizeF size = grafik.MeasureString(text, font);
+                size.Width += margin * 142;
+                size.Height += margin * 2;
+
+
+                var posXText = (SpaceBoard.Width / 2) - (size.Width / 2);
+                var posYText = 0;
+
+                Rectangle rect = new Rectangle((int)posXText, (int)posYText, (int)size.Width, (int)size.Height);
+                var fillBrush = new SolidBrush(Color.Black);
+                var line = new Pen(Color.LimeGreen);
+
+                grafik.FillRectangle(fillBrush, rect);
+                grafik.DrawRectangle(line, rect);
+
+                Brush brush = Brushes.LimeGreen;
+                PointF position = new PointF(posXText + margin, posYText + margin);
+                grafik.DrawString(text, font, brush, position);
+            }
+            SpaceBoard.Invalidate();
+        }
+
+      
+
+
 
 
         private void MoveEnemy()
@@ -220,7 +262,7 @@ namespace pkl_app_1_taufiqhdyt
                     Width = WIDTH,
                     Height = HEIGHT,
                     PosX = (i * WIDTH * 2) - WIDTH,
-                    PosY = 2
+                    PosY = 5
                 };
                 _listEnemy.Add(newEnemy);
             }
@@ -236,7 +278,7 @@ namespace pkl_app_1_taufiqhdyt
                     Width = WIDTH,
                     Height = HEIGHT,
                     PosX = ((i - 9) * WIDTH * 2) - WIDTH,
-                    PosY = 7
+                    PosY = 9
                 };
                 _listEnemy.Add(newEnemy);
             }
@@ -252,7 +294,7 @@ namespace pkl_app_1_taufiqhdyt
                     Width = WIDTH,
                     Height = HEIGHT,
                     PosX = ((i - 18) * WIDTH * 2) - WIDTH,
-                    PosY = 12
+                    PosY = 13
                 };
                 _listEnemy.Add(newEnemy);
             }
@@ -268,7 +310,7 @@ namespace pkl_app_1_taufiqhdyt
                     Width = WIDTH,
                     Height = HEIGHT,
                     PosX = ((i - 27) * WIDTH * 2) - WIDTH,
-                    PosY = 17
+                    PosY = 16
                 };
                 _listEnemy.Add(newEnemy);
             }
@@ -302,7 +344,7 @@ namespace pkl_app_1_taufiqhdyt
                 Width = 5,
                 Height = 3,
                 PosX = 0,
-                PosY = 37,
+                PosY = 36,
             };
         }
         private void CreatePeluruActorObject()
@@ -429,6 +471,7 @@ namespace pkl_app_1_taufiqhdyt
                 enemyTertembak.IsAlive = 1;
                 _peluruActor.IsAktif = false;
                 _peluruActor.PosY = -10;
+                _score += 1;
             }
 
             //  apakah peluru kena udah lewat batas atas
@@ -480,13 +523,13 @@ namespace pkl_app_1_taufiqhdyt
                 if (benteng.DefencePower <= 0)
                     continue;
 
-                if (peluru.PosY < benteng.PosY)
+                if (peluru.PosY < benteng.PosY - 1)
                     continue;
                 if (peluru.PosY > benteng.PosY + benteng.Height - 1)
                     continue;
-                if (peluru.PosX < benteng.PosX)
+                if (peluru.PosX < benteng.PosX  - 1)
                     continue;
-                if (peluru.PosX > benteng.PosX + benteng.Width - 1)
+                if (peluru.PosX > benteng.PosX + benteng.Width - 2)
                     continue;
                 return benteng;
             }
@@ -525,10 +568,9 @@ namespace pkl_app_1_taufiqhdyt
                     StopAllTimer();
                     DrawGameOver();
                 }
-
-
             }
-        }
+         }
+        
 
         private bool PeluruEnemyKenaActor(PeluruModel peluru)
         {
@@ -597,5 +639,49 @@ namespace pkl_app_1_taufiqhdyt
             return result;
 
         }
+
+        private void life_1_Click(object sender, EventArgs e)
+        {
+               
+        }
+
+        private void life_2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void life_3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /*void Life_index()
+        {
+            if (_liveActor == 1)
+            {
+                life_1.Image = Properties.Resources.life_white;
+            }
+            if (_liveActor == 2)
+            {
+                life_2.Image = Properties.Resources.life_white;
+            }
+            if (_liveActor == 3)
+            {
+                life_3.Image = Properties.Resources.life_white;
+
+
+                StopAllTimer();
+                DrawGameOver();
+            }
+        }
+        private void RestartLive()
+        {
+            _liveActor = 0;
+            life_1.Image = Properties.Resources.life;
+            life_2.Image = Properties.Resources.life;
+            life_3.Image = Properties.Resources.life;
+
+        }*/
+
     }
 }

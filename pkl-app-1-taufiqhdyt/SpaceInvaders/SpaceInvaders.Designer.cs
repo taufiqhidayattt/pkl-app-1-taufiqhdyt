@@ -62,7 +62,7 @@ namespace pkl_app_1_taufiqhdyt
             // EnemyMoveTimer
             // 
             this.EnemyMoveTimer.Enabled = true;
-            this.EnemyMoveTimer.Interval = 500;
+            this.EnemyMoveTimer.Interval = 400;
             this.EnemyMoveTimer.Tick += new System.EventHandler(this.EnemyMoveTimer_Tick_1);
             // 
             // ActorMoveTimer
@@ -80,12 +80,13 @@ namespace pkl_app_1_taufiqhdyt
             // PeluruEnemyMoveTimer
             // 
             this.PeluruEnemyMoveTimer.Enabled = true;
+            this.PeluruEnemyMoveTimer.Interval = 50;
             this.PeluruEnemyMoveTimer.Tick += new System.EventHandler(this.PeluruEnemyMoveTimer_Tick);
             // 
             // PeluruEnemyTembakTimer
             // 
             this.PeluruEnemyTembakTimer.Enabled = true;
-            this.PeluruEnemyTembakTimer.Interval = 3500;
+            this.PeluruEnemyTembakTimer.Interval = 2000;
             this.PeluruEnemyTembakTimer.Tick += new System.EventHandler(this.PeluruEnemyTembakTimer_Tick);
             // 
             // EnemyBullet
@@ -197,7 +198,7 @@ namespace pkl_app_1_taufiqhdyt
             // SpaceBoard
             // 
             this.SpaceBoard.BackColor = System.Drawing.Color.Black;
-            this.SpaceBoard.Location = new System.Drawing.Point(0, 6);
+            this.SpaceBoard.Location = new System.Drawing.Point(1, 0);
             this.SpaceBoard.Name = "SpaceBoard";
             this.SpaceBoard.Size = new System.Drawing.Size(800, 400);
             this.SpaceBoard.TabIndex = 5;
@@ -209,7 +210,7 @@ namespace pkl_app_1_taufiqhdyt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 433);
+            this.ClientSize = new System.Drawing.Size(802, 401);
             this.Controls.Add(this.EnemyBullet);
             this.Controls.Add(this.Latar);
             this.Controls.Add(this.meledak);
@@ -247,7 +248,6 @@ namespace pkl_app_1_taufiqhdyt
         private System.Windows.Forms.PictureBox Enemy1Pic;
         private System.Windows.Forms.PictureBox Enemy2Pic;
         private System.Windows.Forms.PictureBox Enemy3Pic;
-        private System.Windows.Forms.PictureBox SpaceBoard;
         private System.Windows.Forms.Timer EnemyMoveTimer;
         private System.Windows.Forms.Timer ActorMoveTimer;
         private System.Windows.Forms.PictureBox BosPic;
@@ -259,5 +259,6 @@ namespace pkl_app_1_taufiqhdyt
         private System.Windows.Forms.Timer PeluruEnemyMoveTimer;
         private System.Windows.Forms.Timer PeluruEnemyTembakTimer;
         private System.Windows.Forms.PictureBox EnemyBullet;
+        private System.Windows.Forms.PictureBox SpaceBoard;
     }
 }
