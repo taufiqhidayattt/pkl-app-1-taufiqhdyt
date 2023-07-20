@@ -62,7 +62,7 @@ namespace pkl_app_1_taufiqhdyt
             // EnemyMoveTimer
             // 
             this.EnemyMoveTimer.Enabled = true;
-            this.EnemyMoveTimer.Interval = 50;
+            this.EnemyMoveTimer.Interval = 300;
             this.EnemyMoveTimer.Tick += new System.EventHandler(this.EnemyMoveTimer_Tick_1);
             // 
             // ActorMoveTimer
@@ -74,19 +74,18 @@ namespace pkl_app_1_taufiqhdyt
             // PeluruActorTimer
             // 
             this.PeluruActorTimer.Enabled = true;
-            this.PeluruActorTimer.Interval = 1;
+            this.PeluruActorTimer.Interval = 20;
             this.PeluruActorTimer.Tick += new System.EventHandler(this.PeluruMove_Tick);
             // 
             // PeluruEnemyMoveTimer
             // 
             this.PeluruEnemyMoveTimer.Enabled = true;
-            this.PeluruEnemyMoveTimer.Interval = 30;
             this.PeluruEnemyMoveTimer.Tick += new System.EventHandler(this.PeluruEnemyMoveTimer_Tick);
             // 
             // PeluruEnemyTembakTimer
             // 
             this.PeluruEnemyTembakTimer.Enabled = true;
-            this.PeluruEnemyTembakTimer.Interval = 700;
+            this.PeluruEnemyTembakTimer.Interval = 4000;
             this.PeluruEnemyTembakTimer.Tick += new System.EventHandler(this.PeluruEnemyTembakTimer_Tick);
             // 
             // EnemyBullet

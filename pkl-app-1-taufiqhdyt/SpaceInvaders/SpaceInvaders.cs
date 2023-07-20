@@ -368,7 +368,7 @@ namespace pkl_app_1_taufiqhdyt
         {
             _peluruActor.IsAktif = false;
             _peluruActor.Width = 1;
-            _peluruActor.Height = 3;
+            _peluruActor.Height = 2;
             _peluruActor.Gambar = PeluruPic.Image;
 
         }
@@ -491,7 +491,7 @@ namespace pkl_app_1_taufiqhdyt
                 _peluruActor.IsAktif = false;
                 _peluruActor.PosY = -10;
                 _score += 1;
-                PlaySound(ENEMY_TERTEMBAK_SOUND);
+               // PlaySound(ENEMY_TERTEMBAK_SOUND);
 
             }
 
