@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,10 +26,17 @@ namespace pkl_app_1_taufiqhdyt
         private string _arahActor = "";
         private PeluruModel _peluruActor;
         private List<PeluruModel> _listPeluruEnemy;
-        int _liveActor ;
         private int _score = 0;
         private bool _isGameOver = false;
-            
+
+
+
+        const string ACTOR_NEMBAK_SOUND = "pkl_app_1_taufiqhdyt.Actor-nembak.wav";
+        const string ENEMY_NEMBAK_SOUND = "pkl_app_1_taufiqhdyt.Enemy-nembak.wav";
+        const string ENEMY_TERTEMBAK_SOUND = "pkl_app_1_taufiqhdyt.Enemy-tertembak.wav";
+        const string BENTENG_TERTEMBAK_SOUND = "pkl_app_1_taufiqhdyt.Benteng-tertembak.wav";
+
+
         public SpaceInvaders()
         {
 
@@ -67,8 +76,10 @@ namespace pkl_app_1_taufiqhdyt
             using (var grafik = Graphics.FromImage(canvas))
             {
                 for (int x = 0; x < SPACE_BOARD_WIDTH; x++)
-                    for (int y = 0; y < SPACE_BOARD_HEIGHT; y++)
-                        grafik.DrawRectangle(new Pen(Color.Black), x * SQUARE_SIZE, y * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
+                    for (int y = 0; y < SPACE_BOARD_HEIGHT; y++) ;     
+                
+                //grafik.DrawImage(Properties.Resources.BackgroundSpaceInvaders, 0, 0, canvas.Width, canvas.Height);
+                //grafik.DrawRectangle(new Pen(Color.DarkGreen), x * SQUARE_SIZE, y * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
             }
         }
         private void DrawEnemy()
@@ -110,6 +121,12 @@ namespace pkl_app_1_taufiqhdyt
                     grafik.DrawImage(item.Gambar, item.PosX * SQUARE_SIZE, item.PosY * SQUARE_SIZE, item.Width * SQUARE_SIZE, item.Height * SQUARE_SIZE);
             }
         }
+        private void PlaySound(string soundName)
+        {
+            Stream soundStream = typeof(Program).Assembly.GetManifestResourceStream(soundName);
+            SoundPlayer soundPlayer = new SoundPlayer(soundStream);
+            soundPlayer.Play();
+        }
 
         private void DrawBenteng()
         {
@@ -136,7 +153,7 @@ namespace pkl_app_1_taufiqhdyt
                             brush = new SolidBrush(Color.DarkSlateGray);
                             break;
                         default:
-                            brush = new SolidBrush(Color.Black);
+                            brush = new SolidBrush(Color.Transparent);
                             break;
                     };
                     grafik.FillRectangle(brush, benteng.PosX * SQUARE_SIZE, benteng.PosY * SQUARE_SIZE, benteng.Width * SQUARE_SIZE, benteng.Height * SQUARE_SIZE);
@@ -148,7 +165,7 @@ namespace pkl_app_1_taufiqhdyt
         {
             using (var grafik = Graphics.FromImage(canvas))
             {
-                var margin = 10;
+                var margin = 30;
 
                 Font font = new Font("OCR A Extended", 34, FontStyle.Bold);
                 string text = "GAME OVER!";
@@ -157,7 +174,7 @@ namespace pkl_app_1_taufiqhdyt
                 size.Height += margin * 2;
 
                 var posXText = (SpaceBoard.Width / 2) - (size.Width / 2);
-                var posYText = 150;
+                var posYText = 160;
 
 
                 Rectangle rect = new Rectangle((int)posXText, posYText, (int)size.Width, (int)size.Height);
@@ -377,6 +394,8 @@ namespace pkl_app_1_taufiqhdyt
             _peluruActor.PosX = _actor.PosX + (_actor.Width / 2);
             _peluruActor.PosY = _actor.PosY - 3;
             _peluruActor.IsAktif = true;
+            PlaySound(ACTOR_NEMBAK_SOUND);
+
         }
 
 
@@ -472,6 +491,8 @@ namespace pkl_app_1_taufiqhdyt
                 _peluruActor.IsAktif = false;
                 _peluruActor.PosY = -10;
                 _score += 1;
+                PlaySound(ENEMY_TERTEMBAK_SOUND);
+
             }
 
             //  apakah peluru kena udah lewat batas atas
@@ -562,6 +583,8 @@ namespace pkl_app_1_taufiqhdyt
                     benteng.DefencePower--;
                     item.IsAktif = false;
                     item.PosY = -10;
+                    PlaySound(BENTENG_TERTEMBAK_SOUND);
+
                 }
                 if (PeluruEnemyKenaActor(item))
                 {
@@ -580,10 +603,11 @@ namespace pkl_app_1_taufiqhdyt
                 return false;
             if (peluru.PosY > _actor.PosY + _actor.Height - 1)
                 return false;
-            if (peluru.PosX < _actor.PosX)
+            if (peluru.PosX < _actor.PosX -1)
                 return false;
             if (peluru.PosX > _actor.PosX + _actor.Width - 1)
                 return false;
+           
 
             return true;
         }
@@ -607,6 +631,8 @@ namespace pkl_app_1_taufiqhdyt
             peluru.IsAktif = true;
             peluru.PosX = enemyNembak.PosX;
             peluru.PosY = enemyNembak.PosY;
+            PlaySound(ENEMY_NEMBAK_SOUND);
+
         }
 
 
@@ -640,48 +666,6 @@ namespace pkl_app_1_taufiqhdyt
 
         }
 
-        private void life_1_Click(object sender, EventArgs e)
-        {
-               
-        }
-
-        private void life_2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void life_3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        /*void Life_index()
-        {
-            if (_liveActor == 1)
-            {
-                life_1.Image = Properties.Resources.life_white;
-            }
-            if (_liveActor == 2)
-            {
-                life_2.Image = Properties.Resources.life_white;
-            }
-            if (_liveActor == 3)
-            {
-                life_3.Image = Properties.Resources.life_white;
-
-
-                StopAllTimer();
-                DrawGameOver();
-            }
-        }
-        private void RestartLive()
-        {
-            _liveActor = 0;
-            life_1.Image = Properties.Resources.life;
-            life_2.Image = Properties.Resources.life;
-            life_3.Image = Properties.Resources.life;
-
-        }*/
-
+      
     }
 }

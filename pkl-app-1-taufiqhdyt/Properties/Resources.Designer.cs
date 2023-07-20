@@ -613,6 +613,16 @@ namespace pkl_app_1_taufiqhdyt.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap smallPuff2 {
+            get {
+                object obj = ResourceManager.GetObject("smallPuff2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap snake_graphics {
             get {
                 object obj = ResourceManager.GetObject("snake-graphics", resourceCulture);

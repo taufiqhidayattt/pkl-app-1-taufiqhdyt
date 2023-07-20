@@ -62,13 +62,13 @@ namespace pkl_app_1_taufiqhdyt
             // EnemyMoveTimer
             // 
             this.EnemyMoveTimer.Enabled = true;
-            this.EnemyMoveTimer.Interval = 400;
+            this.EnemyMoveTimer.Interval = 50;
             this.EnemyMoveTimer.Tick += new System.EventHandler(this.EnemyMoveTimer_Tick_1);
             // 
             // ActorMoveTimer
             // 
             this.ActorMoveTimer.Enabled = true;
-            this.ActorMoveTimer.Interval = 50;
+            this.ActorMoveTimer.Interval = 30;
             this.ActorMoveTimer.Tick += new System.EventHandler(this.ActorMoveTimer_Tick_1);
             // 
             // PeluruActorTimer
@@ -80,13 +80,13 @@ namespace pkl_app_1_taufiqhdyt
             // PeluruEnemyMoveTimer
             // 
             this.PeluruEnemyMoveTimer.Enabled = true;
-            this.PeluruEnemyMoveTimer.Interval = 50;
+            this.PeluruEnemyMoveTimer.Interval = 30;
             this.PeluruEnemyMoveTimer.Tick += new System.EventHandler(this.PeluruEnemyMoveTimer_Tick);
             // 
             // PeluruEnemyTembakTimer
             // 
             this.PeluruEnemyTembakTimer.Enabled = true;
-            this.PeluruEnemyTembakTimer.Interval = 2000;
+            this.PeluruEnemyTembakTimer.Interval = 700;
             this.PeluruEnemyTembakTimer.Tick += new System.EventHandler(this.PeluruEnemyTembakTimer_Tick);
             // 
             // EnemyBullet
@@ -210,7 +210,7 @@ namespace pkl_app_1_taufiqhdyt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(802, 401);
+            this.ClientSize = new System.Drawing.Size(802, 451);
             this.Controls.Add(this.EnemyBullet);
             this.Controls.Add(this.Latar);
             this.Controls.Add(this.meledak);

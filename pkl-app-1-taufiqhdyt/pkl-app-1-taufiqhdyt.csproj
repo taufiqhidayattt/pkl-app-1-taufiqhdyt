@@ -399,5 +399,28 @@
   <ItemGroup>
     <None Include="Resources\Boomenemy.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smallPuff2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Benteng-tertembak.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Actor-nembak.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Enemy-nembak.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Enemy-tertembak.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

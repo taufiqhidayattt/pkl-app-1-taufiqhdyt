@@ -31,7 +31,6 @@ namespace pkl_app_1_taufiqhdyt
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUtama));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.latihanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stringNamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,16 +46,16 @@ namespace pkl_app_1_taufiqhdyt
             this.formAnimasiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tugasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kalkulatorToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.spaceInvadersToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.kalkulatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.spaceInvadersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.spaceInvadersToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
-            this.menuStrip1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("menuStrip1.BackgroundImage")));
+            this.menuStrip1.BackColor = System.Drawing.Color.Navy;
+            this.menuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.latihanToolStripMenuItem,
             this.tugasToolStripMenuItem});
@@ -184,9 +183,16 @@ namespace pkl_app_1_taufiqhdyt
             // kalkulatorToolStripMenuItem1
             // 
             this.kalkulatorToolStripMenuItem1.Name = "kalkulatorToolStripMenuItem1";
-            this.kalkulatorToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.kalkulatorToolStripMenuItem1.Size = new System.Drawing.Size(163, 22);
             this.kalkulatorToolStripMenuItem1.Text = "Kalkulator";
             this.kalkulatorToolStripMenuItem1.Click += new System.EventHandler(this.kalkulatorToolStripMenuItem_Click);
+            // 
+            // spaceInvadersToolStripMenuItem1
+            // 
+            this.spaceInvadersToolStripMenuItem1.Name = "spaceInvadersToolStripMenuItem1";
+            this.spaceInvadersToolStripMenuItem1.Size = new System.Drawing.Size(163, 22);
+            this.spaceInvadersToolStripMenuItem1.Text = "SpaceInvaders";
+            this.spaceInvadersToolStripMenuItem1.Click += new System.EventHandler(this.spaceInvadersToolStripMenuItem_Click);
             // 
             // kalkulatorToolStripMenuItem
             // 
@@ -202,20 +208,12 @@ namespace pkl_app_1_taufiqhdyt
             this.spaceInvadersToolStripMenuItem.Text = "SpaceInvaders";
             this.spaceInvadersToolStripMenuItem.Click += new System.EventHandler(this.spaceInvadersToolStripMenuItem_Click);
             // 
-            // spaceInvadersToolStripMenuItem1
-            // 
-            this.spaceInvadersToolStripMenuItem1.Name = "spaceInvadersToolStripMenuItem1";
-            this.spaceInvadersToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.spaceInvadersToolStripMenuItem1.Text = "SpaceInvaders";
-            this.spaceInvadersToolStripMenuItem1.Click += new System.EventHandler(this.spaceInvadersToolStripMenuItem_Click);
-            // 
             // FormUtama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BackColor = System.Drawing.Color.Navy;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(962, 602);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
